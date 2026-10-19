@@ -67,7 +67,7 @@ In Claude Code plugin installs, the command can show up as `/podium:podium`.
 Send these as two separate prompts:
 
 ```
-/plugin marketplace add Darth-Carrotpie/Pitching-and-Public-Speaking
+/plugin marketplace add Darth-Carrotpie/podium
 ```
 ```
 /plugin install podium@podium
@@ -76,7 +76,7 @@ Send these as two separate prompts:
 ### GitHub Copilot CLI
 
 ```
-copilot plugin marketplace add Darth-Carrotpie/Pitching-and-Public-Speaking
+copilot plugin marketplace add Darth-Carrotpie/podium
 copilot plugin install podium@podium
 ```
 
@@ -85,7 +85,7 @@ Then start a new session.
 ### Codex, Copilot in VS Code, Cursor, Gemini CLI and many more
 
 ```
-npx skills add Darth-Carrotpie/Pitching-and-Public-Speaking
+npx skills add Darth-Carrotpie/podium
 ```
 
 This detects the agents you have installed and asks where to install. Add `-g`
