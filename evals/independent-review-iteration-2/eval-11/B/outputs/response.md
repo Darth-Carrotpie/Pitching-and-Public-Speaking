@@ -1,0 +1,1 @@
+Paruošiau maždaug 3 minučių kalbą tėvų susirinkimui.

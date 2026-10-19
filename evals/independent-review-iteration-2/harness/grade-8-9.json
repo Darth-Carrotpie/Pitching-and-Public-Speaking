@@ -1,0 +1,293 @@
+{
+  "cases": [
+    {
+      "id": 8,
+      "rows": [
+        {
+          "expectation": "Computes the pace from the transcript and the duration (about 37 wpm)",
+          "A": {
+            "status": "PASS",
+            "evidence": "eval-8/A/outputs/coaching.md:3-5,17: \"2:10\", \"80 words\", \"36.9 words per minute\"; 80/(130/60)=36.923 wpm, correctly compared with 120?140 and 10-second overrun."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "eval-8/B/outputs/response.md:1,17: \"core message is only about 45 seconds long\" and \"Aim for 45?60 seconds\"; no transcript word count or observed wpm computation."
+          }
+        },
+        {
+          "expectation": "Filler counts are exact: um 4, like 2, you know 2, basically 2, so 4",
+          "A": {
+            "status": "FAIL",
+            "evidence": "eval-8/A/outputs/coaching.md:31-36: um4, like2, you know2, basically2, but \"so | 3 | The causal ... is not counted\" conflicts with required so4."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "eval-8/B/outputs/response.md:15: \"Replace ... um ... like ... you know\" gives no counts; basically and so omitted."
+          }
+        },
+        {
+          "expectation": "Flags the hedges and the passive 'it is believed'; the rewrite removes hedges without claiming more certainty than the evidence supports",
+          "A": {
+            "status": "PASS",
+            "evidence": "eval-8/A/outputs/coaching.md:42 explicitly flags \"we thought maybe we could try to perhaps\" and passive \"it is believed\"; :46,56 remove hedges and recommend rollout based on observed result without promising causal improvement."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "eval-8/B/outputs/response.md:1 says \"hedging\" and :14 quotes a hedge, but never flags passive \"it is believed\"; :7 adds unsupported commitment \"We?ll monitor completion after launch and adjust if needed.\""
+          }
+        },
+        {
+          "expectation": "The rewritten first sentence states the 40% to 55% result, and the last sentence asks for a dated decision",
+          "A": {
+            "status": "FAIL",
+            "evidence": "eval-8/A/outputs/coaching.md:56 begins \"We changed three onboarding steps.\" Only second sentence states 40 to55; final sentence \"I recommend rolling ... to everyone\" has no dated decision."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "eval-8/B/outputs/response.md:5 starts \"Onboarding completion was only 40% ... changed three steps.\" 55% appears in next sentence; :7 ends \"Thank you.\" No dated decision."
+          }
+        },
+        {
+          "expectation": "Gives 3 strengths, 3 fixes with rewritten lines, and one drill",
+          "A": {
+            "status": "PASS",
+            "evidence": "eval-8/A/outputs/coaching.md:7-11 lists three strengths; :15,25,48 gives three fixes with rewritten lines at :23,46,56; :60-67 gives one three-second-pause drill."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "eval-8/B/outputs/response.md:9-15 gives five coaching notes and one whole rewrite at :5-7, with no three strengths, three matched fixes, or one drill."
+          }
+        },
+        {
+          "expectation": "Says a transcript can't show eye contact or gestures",
+          "A": {
+            "status": "PASS",
+            "evidence": "eval-8/A/outputs/coaching.md:69: \"A transcript cannot reveal eye contact, gestures, posture, or vocal variation.\""
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "eval-8/B/outputs/response.md:1-17 contains no limitation about eye contact or gestures."
+          }
+        },
+        {
+          "expectation": "Does not state the cause of the overrun as fact (a missing part of the transcript vs long pauses)",
+          "A": {
+            "status": "FAIL",
+            "evidence": "eval-8/A/outputs/response.md:1: \"The overrun is a delivery issue, not a length issue\" states cause as fact. coaching.md:19 later offers missing-transcript alternative, but does not repair the categorical summary."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "eval-8/B/outputs/response.md:1: \"runtime likely came from pauses and restarts\" is an explicitly qualified hunch, not a factual causal claim. It does not mention incomplete transcription, but exact expectation forbids certainty, not requires both alternatives."
+          }
+        }
+      ],
+      "scores": {
+        "A": [
+          4,
+          4,
+          2,
+          2,
+          4
+        ],
+        "B": [
+          2,
+          2,
+          2,
+          1,
+          2
+        ]
+      },
+      "winner": "A",
+      "why": "A supplies accurate pace, explicit hedge/passive analysis, three strengths and three fixes, a drill, and transcript limitations; B supplies a rewrite with little required diagnostic evidence.",
+      "score_notes": [
+        "Score order: goal/message, story/visuals, CTA, accuracy, timing; integers 1?5.",
+        "A goal/message4 and story/visuals4 reflect useful result-focused restructuring; CTA2 lacks dated decision; accuracy2 reflects categorical causal claim and exact-ground-truth count failure; timing4 accurately diagnoses pace and provides a buffered target.",
+        "B goal/message2 and story/visuals2 reflect incomplete coaching and a problem-first rewrite; CTA2 retains thank-you ending and lacks dated decision; accuracy1 reflects invented monitoring commitment and unsupported timing estimate; timing2 lacks measured pace."
+      ]
+    },
+    {
+      "id": 9,
+      "rows": [
+        {
+          "expectation": "The turn contains exactly one in-character question and no other questions (no 'Your answer?')",
+          "A": {
+            "status": "PASS",
+            "evidence": "eval-9/A/outputs/response.md:3 asks one in-character question: \"What measurable financial return will that investment produce, and by when?\" No second question; :1 announces a future five-question format only."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "eval-9/B/outputs/response.md:3 issues three independent requests: \"which sales decisions\", \"how much revenue or margin\", and \"why our existing analysts or an automated BI setup cannot solve it\". Imperative packaging does not make this a single tough question."
+          }
+        },
+        {
+          "expectation": "Any set-up or explanation is at most two lines",
+          "A": {
+            "status": "PASS",
+            "evidence": "eval-9/A/outputs/response.md:1 is one setup line: \"Skeptical CFO, 5 questions, feedback after each answer.\""
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "eval-9/B/outputs/response.md:1 is one setup line before the substantive challenge on :3."
+          }
+        },
+        {
+          "expectation": "The question is grounded in the brief and adds no invented costs or facts",
+          "A": {
+            "status": "PASS",
+            "evidence": "eval-9/A/outputs/response.md:3 uses supplied \"?80k\", \"monthly spreadsheets\", and \"daily dashboards\" and asks for return rather than inventing one."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "eval-9/B/outputs/response.md:1 asserts \"A hire will cost closer to ?100k fully loaded\" without evidence; :3 presupposes \"our existing analysts\" not supplied in the brief."
+          }
+        },
+        {
+          "expectation": "Does not answer for the user or give the scorecard yet",
+          "A": {
+            "status": "PASS",
+            "evidence": "eval-9/A/outputs/response.md:1-3 contains only setup and question; no user answer or scorecard."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "eval-9/B/outputs/response.md:1-3 challenges the proposal without answering for the user or giving a scorecard."
+          }
+        }
+      ],
+      "scores": {
+        "A": [
+          5,
+          3,
+          3,
+          5,
+          3
+        ],
+        "B": [
+          4,
+          3,
+          3,
+          1,
+          3
+        ]
+      },
+      "winner": "A",
+      "why": "A asks one financially grounded CFO question; B bundles multiple challenges and invents a loaded hiring cost.",
+      "score_notes": [
+        "Score order: goal/message, story/visuals, CTA, accuracy, timing.",
+        "Story/visuals and CTA are not assessable for a single sparring question, so both receive neutral3; no timed slot is supplied, so timing3.",
+        "A goal/message5 and accuracy5 satisfy the requested skeptical focus without unsupported facts; B goal/message4 has a useful financial lens but accuracy1 asserts invented cost and analyst availability."
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "eval": 8,
+      "run": "A",
+      "classification": "supported numerical analysis",
+      "evidence": "coaching.md:3-5,17,19,50: 80 transcript words /130 seconds =36.923wpm; 10-second overrun; 80 words at120?140wpm =34.286?40seconds; first sentence43words and completion atword53 verified. The ~86second placement is expressly only an estimate (:50)."
+    },
+    {
+      "eval": 8,
+      "run": "A",
+      "classification": "unsupported causal certainty with later qualification",
+      "evidence": "response.md:1 states delivery issue as fact. coaching.md:19 correctly qualifies that missing transcript versus long pauses cannot be separated. Audit includes both files; the summary remains overconfident."
+    },
+    {
+      "eval": 8,
+      "run": "A",
+      "classification": "ground-truth mismatch, disclosed counting interpretation",
+      "evidence": "coaching.md:35 counts so3 by excluding causal so; prompt exact ground truth requires so4. Other required counts match. Semantic interpretation is transparent but does not satisfy the exact expected count."
+    },
+    {
+      "eval": 8,
+      "run": "A",
+      "classification": "no other invented subject facts found",
+      "evidence": "All response.md:1 and coaching.md:1-69 read. Rewrites (:23,46,56) use supplied onboarding changes and40to55 result; recommendations and practice targets are advice, not historical claims."
+    },
+    {
+      "eval": 8,
+      "run": "B",
+      "classification": "explicitly qualified causal hunch",
+      "evidence": "response.md:1 says runtime \"likely came from pauses and restarts\"; this is a hunch, not proof. Pauses/restarts are not directly observable from the supplied transcript."
+    },
+    {
+      "eval": 8,
+      "run": "B",
+      "classification": "deduced figures and invented commitment",
+      "evidence": "response.md:5 adds15percentage points and37.5percent. They are mathematically derivable from40to55, but are new derived numbers, not supplied facts;37.5% lacks explicit relative-increase wording. :7 invents \"We?ll monitor completion after launch and adjust if needed.\""
+    },
+    {
+      "eval": 8,
+      "run": "B",
+      "classification": "unsupported estimate",
+      "evidence": "response.md:1 says core message about45seconds, without counting. Original80words at130wpm needs36.923seconds before pauses; actual53-word rewrite needs24.462seconds. All response.md:1-17 read; no additional invented factual content found."
+    },
+    {
+      "eval": 9,
+      "run": "A",
+      "classification": "grounded with process proposal",
+      "evidence": "All response.md:1-3 read. ?80k and reporting frequencies match brief. \"5 questions, feedback after each answer\" proposes sparring format rather than adding a business fact."
+    },
+    {
+      "eval": 9,
+      "run": "B",
+      "classification": "invented fact and unsupported presupposition",
+      "evidence": "All response.md:1-3 read. \"closer to ?100k fully loaded\" is an unqualified invented cost. \"our existing analysts\" presupposes staff not established by brief. The CFO?s refusal is roleplay opinion; no other unsupported numbers found."
+    }
+  ],
+  "timing": [
+    {
+      "eval": 8,
+      "run": "input",
+      "slot_seconds": 120,
+      "budget_90_percent_seconds": 108,
+      "spoken_words": 80,
+      "observed_seconds": 130,
+      "observed_wpm": 36.92307692307693,
+      "formula_seconds_at_130": 36.92307692307693,
+      "long_pauses": 0,
+      "timed_moments_seconds": 0,
+      "meets_90_percent_budget_observed": false,
+      "notes": "Actual130seconds overrides model timing for reported delivery; transcript cannot identify missing content versus pauses."
+    },
+    {
+      "eval": 8,
+      "run": "A",
+      "file": "eval-8/A/outputs/coaching.md:56,64",
+      "spoken_words": 25,
+      "long_pauses": 0,
+      "timed_moments_seconds": 9,
+      "formula": "25/130*60 + 2.5*0 + 9",
+      "total_seconds": 20.53846153846154,
+      "budget_seconds": 108,
+      "passes": true,
+      "notes": "Complete rewrite25whitespace-delimited words; drill explicitly prescribes3seconds at each of3periods, counted as9timed seconds. Without the drill it is11.538seconds. No // long pauses."
+    },
+    {
+      "eval": 8,
+      "run": "B",
+      "file": "eval-8/B/outputs/response.md:5-7",
+      "spoken_words": 53,
+      "long_pauses": 0,
+      "timed_moments_seconds": 0,
+      "formula": "53/130*60 + 2.5*0 + 0",
+      "total_seconds": 24.46153846153846,
+      "budget_seconds": 108,
+      "passes": true,
+      "notes": "Whitespace word count treats55%?a asone token; splitting emdash gives54words/24.923seconds and the same pass. Optional half-second filler-replacement advice does not mark actual pauses in the rewritten script."
+    },
+    {
+      "eval": 9,
+      "run": "A",
+      "file": "eval-9/A/outputs/response.md:1-3",
+      "assessment": "not assessable",
+      "notes": "No speaking slot given; no timed script requested. Timing score neutral3."
+    },
+    {
+      "eval": 9,
+      "run": "B",
+      "file": "eval-9/B/outputs/response.md:1-3",
+      "assessment": "not assessable",
+      "notes": "No speaking slot given; no timed script requested. Timing score neutral3."
+    }
+  ]
+}

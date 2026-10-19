@@ -1,0 +1,1 @@
+What should the audience do after this Q3 update? Suggested default: **agree on owners and deadlines for the remaining risks while staying aligned on Q3 progress.**

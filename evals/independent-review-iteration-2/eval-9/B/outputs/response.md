@@ -1,0 +1,3 @@
+CFO: “I’m not approving €80k because spreadsheets arrive too slowly. A hire will cost closer to €100k fully loaded, and ‘daily dashboards’ are an output—not a business result.
+
+Tell me which sales decisions are currently delayed by monthly reporting, how much revenue or margin that costs us, and why our existing analysts or an automated BI setup cannot solve it more cheaply. Give me numbers, not convenience.”

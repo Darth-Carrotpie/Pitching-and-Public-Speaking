@@ -1,0 +1,3 @@
+Done: a market-slide spec, a 53-second script, and a renderable Marp slide. The framing makes Poland the credible beachhead into a larger category without inventing market figures.
+
+Replace `[A]–[C]` with sourced clinic-count and pricing data. Render `slides.marp.md` with the Marp VS Code extension or `npx @marp-team/marp-cli@latest slides.marp.md --pptx`; alternatively, paste the slide spec into your deck tool.

@@ -1,0 +1,5 @@
+2026-10-19T14:01:47.462393Z  WARN codex_core::config::managed_features: Ignoring unknown `features` requirement `ultrafast_mode` from requirements layers: enterprise-managed requirements Ultra Fast mode access (rbac-ultrafast-mode), enterprise-managed requirements Computer History access (rbac-computer-history)
+2026-10-19T14:04:00.348398Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `supports_parallel_tool_calls` at line 139 column 5
+2026-10-19T14:04:36.256185Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `supports_parallel_tool_calls` at line 139 column 5
+2026-10-19T14:05:22.273272Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `supports_parallel_tool_calls` at line 139 column 5
+2026-10-19T14:06:06.711484Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `supports_parallel_tool_calls` at line 139 column 5

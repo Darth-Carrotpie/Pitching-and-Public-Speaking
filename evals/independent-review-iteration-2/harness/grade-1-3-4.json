@@ -1,0 +1,960 @@
+{
+  "review": "Canonical schema-delivery iteration 2; fresh independent assessment of cases 1,3,4. Excluded preliminary runs/grades were not used.",
+  "method": {
+    "scores": "Five dimensions are integers 1-5; accuracy penalizes unsupported factual assertions even if the listed expectation concerns a narrower topic. No-slot timing is provisional 3.",
+    "counting": "Count primary spoken text only. Strip headings, stage cues and / markers; em/en dashes separate words, ordinary hyphens and apostrophes stay within words. Include marked optional cuts in the primary version; exclude alternative openings, optional inserts and post-Q&A alternatives. Each // costs2.5s. Timestamp allocations do not add extra performed moments.",
+    "evidence": "Quotes below are read directly from canonical UTF-8 output files. Each evidence file path is relative to the repository root.",
+    "intake": "Post-draft fact-check lists are not interactive clarification requests. No-reask, cap and default criteria pass vacuously if zero actual clarification requests exist. The separate no-drafting expectation still fails."
+  },
+  "all_files_read": [
+    "evals/independent-review-iteration-2/eval-1/A/outputs/response.md",
+    "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/brief.md",
+    "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/notes.md",
+    "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/rehearsal.md",
+    "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/script.md",
+    "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/slides.marp.md",
+    "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/slides.md",
+    "evals/independent-review-iteration-2/eval-1/B/outputs/leftover-investor-pitch.md",
+    "evals/independent-review-iteration-2/eval-1/B/outputs/response.md",
+    "evals/independent-review-iteration-2/eval-3/A/outputs/response.md",
+    "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/brief.md",
+    "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/notes.md",
+    "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/rehearsal.md",
+    "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/script.md",
+    "evals/independent-review-iteration-2/eval-3/B/outputs/end-of-year-dinner-speech.md",
+    "evals/independent-review-iteration-2/eval-3/B/outputs/response.md",
+    "evals/independent-review-iteration-2/eval-4/A/outputs/market-script.md",
+    "evals/independent-review-iteration-2/eval-4/A/outputs/market-slide.md",
+    "evals/independent-review-iteration-2/eval-4/A/outputs/response.md",
+    "evals/independent-review-iteration-2/eval-4/A/outputs/slides.marp.md",
+    "evals/independent-review-iteration-2/eval-4/B/outputs/market-slide-and-script.md",
+    "evals/independent-review-iteration-2/eval-4/B/outputs/response.md"
+  ],
+  "cases": [
+    {
+      "id": 1,
+      "expectations": {
+        "A": [
+          {
+            "expectation": 1,
+            "result": "PASS",
+            "rationale": "No actual intake requests; facts are repeated without asking the user to reconfirm supplied audience, length, product or raise.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/brief.md",
+                "line": 14,
+                "quote": "## Facts supplied"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/brief.md",
+                "line": 16,
+                "quote": "- Leftover tells restaurant chefs how much food to prepare each morning."
+              }
+            ]
+          },
+          {
+            "expectation": 2,
+            "result": "PASS",
+            "rationale": "Zero independent interactive answer requests. Verification checklists are delivery preparation, not a clarification batch.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-1/A/outputs/response.md",
+                "line": 5,
+                "quote": "Before Thursday, verify the 31% methodology, pilot-to-paying cohort relationship, pricing evidence, round milestones, market, competition, team, product workflow, and one concrete restaurant example. Rehearse the opening and closing first, then practise pausing after “thirty-one percent.”"
+              }
+            ]
+          },
+          {
+            "expectation": 3,
+            "result": "PASS",
+            "rationale": "Vacuously passes: no clarification questions to supply defaults for. Assumptions are used instead.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/brief.md",
+                "line": 5,
+                "quote": "This is a single-turn draft, so the message and structure are strong defaults but **unconfirmed**."
+              }
+            ]
+          },
+          {
+            "expectation": 4,
+            "result": "FAIL",
+            "rationale": "Full script, outline and slides are produced without first gathering missing intake.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/script.md",
+                "line": 9,
+                "quote": "[MEMORIZE] The dining room is empty. / In the kitchen, the day’s decision is being made: how much food should we prepare? // Get that number wrong, and a restaurant runs short or wastes food. / **Leftover gives chefs a clear prep number that cuts waste.** //"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/brief.md",
+                "line": 60,
+                "quote": "| 0:00–0:24 | Empty dining room; the morning prep decision; message | Daily decision |"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/slides.md",
+                "line": 7,
+                "quote": "## Slide 1: Leftover gives chefs a clear prep number that cuts waste."
+              }
+            ]
+          },
+          {
+            "expectation": 5,
+            "result": "PASS",
+            "rationale": "Identifies the tool list as its basis for no callable slide-building tool. No unavailable product is represented as connected.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/slides.md",
+                "line": 5,
+                "quote": "**Tool status:** No callable slide-building tool was available in the tool list. A Marp fallback is included as `slides.marp.md`."
+              }
+            ]
+          }
+        ],
+        "B": [
+          {
+            "expectation": 1,
+            "result": "PASS",
+            "rationale": "Zero clarification requests, so supplied facts are not re-asked.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-1/B/outputs/response.md",
+                "line": 1,
+                "quote": "Done — I drafted a stage-ready three-minute pitch for Thursday, 22 October 2026. It emphasizes the 31% waste reduction, nine paying customers, and €600k raise without inventing missing market or product claims. I also included a short investor Q&A checklist."
+              }
+            ]
+          },
+          {
+            "expectation": 2,
+            "result": "PASS",
+            "rationale": "Zero independent answer requests. Investor question topics are rehearsal preparation, not an intake interaction.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-1/B/outputs/leftover-investor-pitch.md",
+                "line": 44,
+                "quote": "Have concise, factual answers ready for:"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-1/B/outputs/leftover-investor-pitch.md",
+                "line": 46,
+                "quote": "- How the 31% reduction was measured, over what period, and against what baseline."
+              }
+            ]
+          },
+          {
+            "expectation": 3,
+            "result": "PASS",
+            "rationale": "Vacuously passes: no actual answer requests needing defaults.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-1/B/outputs/response.md",
+                "line": 1,
+                "quote": "Done — I drafted a stage-ready three-minute pitch for Thursday, 22 October 2026. It emphasizes the 31% waste reduction, nine paying customers, and €600k raise without inventing missing market or product claims. I also included a short investor Q&A checklist."
+              }
+            ]
+          },
+          {
+            "expectation": 4,
+            "result": "FAIL",
+            "rationale": "Writes the pitch immediately.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-1/B/outputs/leftover-investor-pitch.md",
+                "line": 8,
+                "quote": "Every morning, before the first customer walks in, a restaurant chef has to answer one expensive question: how much food should we prepare today?"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-1/B/outputs/leftover-investor-pitch.md",
+                "line": 34,
+                "quote": "Thank you."
+              }
+            ]
+          },
+          {
+            "expectation": 5,
+            "result": "PASS",
+            "rationale": "No slide tool is named or claimed available. Conditional availability claim requirement is therefore vacuous. Ambiguity: a stronger interpretation requiring an unknown-status sentence on every turn would fail it, but no slide tools are discussed at all.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-1/B/outputs/response.md",
+                "line": 1,
+                "quote": "Done — I drafted a stage-ready three-minute pitch for Thursday, 22 October 2026. It emphasizes the 31% waste reduction, nine paying customers, and €600k raise without inventing missing market or product claims. I also included a short investor Q&A checklist."
+              }
+            ]
+          }
+        ]
+      },
+      "independent_answer_requests": {
+        "A": 0,
+        "B": 0
+      },
+      "scores": {
+        "A": {
+          "goal_message": 4,
+          "story_visuals": 4,
+          "cta": 5,
+          "accuracy": 2,
+          "timing": 5,
+          "rationale": "Clear one-line message, coherent kitchen image and simple evidence visuals; concrete diligence meeting next week. Fails intake gate and overstates same-day measurement timing. Primary script stays within 162s."
+        },
+        "B": {
+          "goal_message": 3,
+          "story_visuals": 3,
+          "cta": 1,
+          "accuracy": 1,
+          "timing": 4,
+          "rationale": "Clear product pitch but no actionable investor follow-up and ends with Thank you. Cohort conversion, revenue derivations and unsupported use of funds impair accuracy; timing fits by word count but marked pauses are absent."
+        }
+      },
+      "facts": {
+        "A": {
+          "unsupported_or_deduced": [
+            {
+              "classification": "Unsupported measurement-time inference",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/script.md",
+                "line": 21,
+                "quote": "That is not a forecast. It is an operating result from real kitchens. / It shows that changing one morning decision can create a measurable result by closing time."
+              },
+              "why": "The brief gives 31% prep-waste reduction but no same-day measurement window or evidence that impact is established by closing time."
+            },
+            {
+              "classification": "Unsupported cohort implication in companion cue card",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/notes.md",
+                "line": 28,
+                "quote": "- Testing → paying"
+              },
+              "why": "Testing to paying implies conversion, while the source does not establish that the nine payers were pilots. Main brief explicitly keeps cohorts independent."
+            }
+          ],
+          "proposed_assumptions": [
+            {
+              "file": "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/brief.md",
+              "line": 8,
+              "quote": "- **Speaker:** assumed to be a founder"
+            },
+            {
+              "file": "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/brief.md",
+              "line": 10,
+              "quote": "- **Setting:** assumed live, with questions afterwards"
+            },
+            {
+              "file": "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/brief.md",
+              "line": 69,
+              "quote": "The line about repeating results across more restaurants is a drafting assumption about the next milestone, not a supplied company plan. Replace it with the actual use of funds and milestones before delivery."
+            }
+          ],
+          "notes": "Founder role, live/Q&A format and growth milestone are explicitly assumptions. Calendar date resolves next Thursday from current date; no case-1 clause prohibits calendar derivation. No invented market, team or ROI figures found. Companion Q&A preserves unknown cohort overlap at rehearsal lines44-46."
+        },
+        "B": {
+          "unsupported_or_deduced": [
+            {
+              "classification": "Unconfirmed pilot-to-payer cohort and causal attribution",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-1/B/outputs/leftover-investor-pitch.md",
+                "line": 20,
+                "quote": "And that result has translated into willingness to pay: nine of the 14 restaurants now pay €290 per month. That is €2,610 in monthly recurring revenue, or a €31,320 annualized subscription run rate."
+              },
+              "why": "Nine of fourteen and result translated to payment are not established by supplied separate counts."
+            },
+            {
+              "classification": "Derived revenue and conversion figures",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-1/B/outputs/leftover-investor-pitch.md",
+                "line": 22,
+                "quote": "That is not scale yet—but it is clear validation. Restaurants have tried Leftover, achieved a measurable result, and chosen to pay for it. Nearly two-thirds of our pilot restaurants are already paying customers."
+              },
+              "why": "Nearly two-thirds depends on unconfirmed cohort overlap. MRR2610 and annual run rate31320 at line20 are arithmetically correct but derived, not provided."
+            },
+            {
+              "classification": "Unsupported use of funds",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-1/B/outputs/leftover-investor-pitch.md",
+                "line": 26,
+                "quote": "We are now raising €600,000 to take Leftover from early validation to repeatable growth: expanding the paying restaurant base, strengthening the product, and building a scalable commercial operation."
+              },
+              "why": "Specific product/commercial scaling plans were not supplied."
+            },
+            {
+              "classification": "Deduced remaining cohort in companion Q&A",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-1/B/outputs/leftover-investor-pitch.md",
+                "line": 47,
+                "quote": "- What happened with the other five pilot restaurants and how long paying customers have stayed."
+              },
+              "why": "Other five pilot restaurants presumes all nine payers belong to fourteen pilots."
+            },
+            {
+              "classification": "Unsupported industry positioning",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-1/B/outputs/leftover-investor-pitch.md",
+                "line": 28,
+                "quote": "The restaurant industry does not need more software that only reports waste after it happens. Chefs need a useful decision before prep begins. Leftover provides that decision."
+              },
+              "why": "Industry need and implied inadequacy of reporting software are unsupported qualitative claims."
+            }
+          ],
+          "notes": "Case1 has no explicit arithmetic prohibition, so these affect accuracy and factual discipline rather than an invented extra expectation."
+        }
+      },
+      "timing": {
+        "A": {
+          "file": "evals/independent-review-iteration-2/eval-1/A/outputs/speeches/seed-pitch-leftover/script.md",
+          "lines": [
+            9,
+            39
+          ],
+          "spoken_words": 312,
+          "long_pauses": 7,
+          "explicitly_timed_moments_seconds": 0,
+          "calculated_seconds": 161.5,
+          "slot_seconds": 180,
+          "limit_seconds": 162.0,
+          "passes_90_percent": true,
+          "assumed_slot_seconds": null,
+          "assumed_slot_pass": null
+        },
+        "B": {
+          "file": "evals/independent-review-iteration-2/eval-1/B/outputs/leftover-investor-pitch.md",
+          "lines": [
+            8,
+            34
+          ],
+          "spoken_words": 337,
+          "long_pauses": 0,
+          "explicitly_timed_moments_seconds": 0,
+          "calculated_seconds": 155.53846153846155,
+          "slot_seconds": 180,
+          "limit_seconds": 162.0,
+          "passes_90_percent": true,
+          "assumed_slot_seconds": null,
+          "assumed_slot_pass": null
+        }
+      },
+      "winner": {
+        "variant": "A",
+        "expectation_passes": {
+          "A": 4,
+          "B": 4
+        },
+        "why": "Both fail the essential no-drafting gate; equal counts reflect vacuous universal clauses. A wins on a concrete CTA, source-aware companion material, preserved cohort uncertainty and better rehearsal/slides. It still contains same-day measurement and cue-card conversion inferences."
+      }
+    },
+    {
+      "id": 3,
+      "expectations": {
+        "A": [
+          {
+            "expectation": 1,
+            "result": "PASS",
+            "rationale": "Complete primary version contains no essential blanks. Personal anecdote placeholder is in a clearly separate optional section.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/script.md",
+                "line": 33,
+                "quote": "[MEMORIZE] Tonight, before we look ahead, look around. / Everyone here has put something of themselves into this team. / That deserves more than a quick “well done.” // This team made this year count—and March is ours."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/script.md",
+                "line": 59,
+                "quote": "[MEMORIZE] Raise your glass: to your work, our March launch, and this team. // Enjoy tonight. / When we’re back, bring your best to the next decision and handoff. / This team made this year count. / **Now let’s make March ours.**"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/script.md",
+                "line": 61,
+                "quote": "## Optional personal insert"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/script.md",
+                "line": 63,
+                "quote": "Replace the final two sentences of “Your work” with a true version of this line, capped at 21 words:"
+              }
+            ]
+          },
+          {
+            "expectation": 2,
+            "result": "PASS",
+            "rationale": "Lists speaker, context, audience and tone assumptions.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/brief.md",
+                "line": 5,
+                "quote": "- Live end-of-year team dinner, without slides or Q&A."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/brief.md",
+                "line": 6,
+                "quote": "- The speaker leads or represents the team."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/brief.md",
+                "line": 7,
+                "quote": "- The audience already knows the product and the March launch context."
+              }
+            ]
+          },
+          {
+            "expectation": 3,
+            "result": "PASS",
+            "rationale": "Both goal and selected message explicitly marked unconfirmed.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/brief.md",
+                "line": 14,
+                "quote": "**Goal — unconfirmed:** After this, the team will celebrate one another tonight and, on returning to work, bring focus and mutual support to the March launch."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/brief.md",
+                "line": 16,
+                "quote": "**Selected message — unconfirmed:** This team made this year count—and March is ours."
+              }
+            ]
+          },
+          {
+            "expectation": 4,
+            "result": "PASS",
+            "rationale": "200 spoken words and3 long pauses: 200/130*60+7.5=99.8077s <=108s.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/script.md",
+                "line": 3,
+                "quote": "200 words = 92.3 s · 3 long pauses = 7.5 s · **total 99.8 s** · limit 108 s (90% of 2:00)"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/script.md",
+                "line": 33,
+                "quote": "[MEMORIZE] Tonight, before we look ahead, look around. / Everyone here has put something of themselves into this team. / That deserves more than a quick “well done.” // This team made this year count—and March is ours."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/script.md",
+                "line": 41,
+                "quote": "Whatever your role, what you brought mattered. //"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/script.md",
+                "line": 59,
+                "quote": "[MEMORIZE] Raise your glass: to your work, our March launch, and this team. // Enjoy tonight. / When we’re back, bring your best to the next decision and handoff. / This team made this year count. / **Now let’s make March ours.**"
+              }
+            ]
+          },
+          {
+            "expectation": 5,
+            "result": "PASS",
+            "rationale": "Closing raises glasses to March and ends on shared March action rather than thank you.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/script.md",
+                "line": 59,
+                "quote": "[MEMORIZE] Raise your glass: to your work, our March launch, and this team. // Enjoy tonight. / When we’re back, bring your best to the next decision and handoff. / This team made this year count. / **Now let’s make March ours.**"
+              }
+            ]
+          },
+          {
+            "expectation": 6,
+            "result": "PASS",
+            "rationale": "Generic appreciation makes no specific memory/event/win claim; optional personal insert explicitly requires a true story supplied by speaker.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/brief.md",
+                "line": 9,
+                "quote": "- No achievements or personal stories were supplied, so the speech makes no specific claims about results."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/script.md",
+                "line": 37,
+                "quote": "First, thank you—for the work people saw, and the work they didn’t. /"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/script.md",
+                "line": 63,
+                "quote": "Replace the final two sentences of “Your work” with a true version of this line, capped at 21 words:"
+              }
+            ]
+          }
+        ],
+        "B": [
+          {
+            "expectation": 1,
+            "result": "FAIL",
+            "rationale": "No blanks, but the compound criterion also requires built from given facts; primary text asserts unprovided team history rather than keeping it optional.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/B/outputs/end-of-year-dinner-speech.md",
+                "line": 5,
+                "quote": "This year asked a lot of us. There were ambitious goals, shifting priorities, difficult decisions, and probably more meetings than any reasonable person should have to attend. But through all of it, this team kept showing up—with talent, good judgment, resilience, and, just as importantly, a sense of humor."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/B/outputs/end-of-year-dinner-speech.md",
+                "line": 7,
+                "quote": "I’m proud of what we accomplished, but I’m even more grateful for how we accomplished it. People stepped in when teammates needed help. You challenged ideas because you cared about making them better. You solved problems that weren’t in any plan, and you kept moving forward when the answer wasn’t obvious. Every contribution mattered, including the quiet work that happened behind the scenes and didn’t always get the recognition it deserved."
+              }
+            ]
+          },
+          {
+            "expectation": 2,
+            "result": "FAIL",
+            "rationale": "Neither output lists assumptions; response only summarizes and speech immediately presents the events as real.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/B/outputs/response.md",
+                "line": 1,
+                "quote": "I wrote a ready-to-deliver two-minute speech with a warm thank-you, a forward-looking message about the March launch, and a closing toast."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/B/outputs/end-of-year-dinner-speech.md",
+                "line": 5,
+                "quote": "This year asked a lot of us. There were ambitious goals, shifting priorities, difficult decisions, and probably more meetings than any reasonable person should have to attend. But through all of it, this team kept showing up—with talent, good judgment, resilience, and, just as importantly, a sense of humor."
+              }
+            ]
+          },
+          {
+            "expectation": 3,
+            "result": "FAIL",
+            "rationale": "No goal/message status labels anywhere in the two outputs; final motivational message is asserted without an unconfirmed brief.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/B/outputs/response.md",
+                "line": 1,
+                "quote": "I wrote a ready-to-deliver two-minute speech with a warm thank-you, a forward-looking message about the March launch, and a closing toast."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/B/outputs/end-of-year-dinner-speech.md",
+                "line": 15,
+                "quote": "So tonight, let’s enjoy how far we’ve come. Then let’s return rested, focused, and ready to make March something we’ll all be proud of."
+              }
+            ]
+          },
+          {
+            "expectation": 4,
+            "result": "FAIL",
+            "rationale": "285 spoken words and0 marked long pauses:131.5385s >108s, also longer than full120s slot.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/B/outputs/end-of-year-dinner-speech.md",
+                "line": 1,
+                "quote": "Good evening, everyone."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/B/outputs/end-of-year-dinner-speech.md",
+                "line": 17,
+                "quote": "To this team, to the year behind us, and to an unforgettable launch ahead. Cheers!"
+              }
+            ]
+          },
+          {
+            "expectation": 5,
+            "result": "PASS",
+            "rationale": "Toast to team and upcoming launch ends on Cheers, after shared action to return focused for March.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/B/outputs/end-of-year-dinner-speech.md",
+                "line": 15,
+                "quote": "So tonight, let’s enjoy how far we’ve come. Then let’s return rested, focused, and ready to make March something we’ll all be proud of."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/B/outputs/end-of-year-dinner-speech.md",
+                "line": 17,
+                "quote": "To this team, to the year behind us, and to an unforgettable launch ahead. Cheers!"
+              }
+            ]
+          },
+          {
+            "expectation": 6,
+            "result": "FAIL",
+            "rationale": "Invents difficult decisions, shifting priorities, teammate help and unplanned problem-solving.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/B/outputs/end-of-year-dinner-speech.md",
+                "line": 5,
+                "quote": "This year asked a lot of us. There were ambitious goals, shifting priorities, difficult decisions, and probably more meetings than any reasonable person should have to attend. But through all of it, this team kept showing up—with talent, good judgment, resilience, and, just as importantly, a sense of humor."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-3/B/outputs/end-of-year-dinner-speech.md",
+                "line": 7,
+                "quote": "I’m proud of what we accomplished, but I’m even more grateful for how we accomplished it. People stepped in when teammates needed help. You challenged ideas because you cared about making them better. You solved problems that weren’t in any plan, and you kept moving forward when the answer wasn’t obvious. Every contribution mattered, including the quiet work that happened behind the scenes and didn’t always get the recognition it deserved."
+              }
+            ]
+          }
+        ]
+      },
+      "scores": {
+        "A": {
+          "goal_message": 5,
+          "story_visuals": 4,
+          "cta": 5,
+          "accuracy": 5,
+          "timing": 5,
+          "rationale": "Warm recognition, clear shared March message, useful look-around image and handoff rhythm, immediate toast. No invented specific history; assumptions and provisional message labeled;99.8s fits."
+        },
+        "B": {
+          "goal_message": 3,
+          "story_visuals": 3,
+          "cta": 4,
+          "accuracy": 1,
+          "timing": 1,
+          "rationale": "Warm but conventional retrospective and actionable toast. Unprovided team history is presented as fact and131.5s misses both buffer and slot. No assumptions or unconfirmed message labels."
+        }
+      },
+      "facts": {
+        "A": {
+          "unsupported_or_deduced": [],
+          "notes": "All six outputs reviewed. Made this year count, unseen work and personal care are generic appreciation, not invented specific wins. No particular accomplishment, date or event asserted. Optional story remains outside the primary script and requires a true replacement."
+        },
+        "B": {
+          "unsupported_or_deduced": [
+            {
+              "classification": "Invented team events and working conditions",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-3/B/outputs/end-of-year-dinner-speech.md",
+                "line": 5,
+                "quote": "This year asked a lot of us. There were ambitious goals, shifting priorities, difficult decisions, and probably more meetings than any reasonable person should have to attend. But through all of it, this team kept showing up—with talent, good judgment, resilience, and, just as importantly, a sense of humor."
+              },
+              "why": "Ambitious goals, shifting priorities, difficult decisions and meeting burden are not supplied."
+            },
+            {
+              "classification": "Invented speaker/team memories",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-3/B/outputs/end-of-year-dinner-speech.md",
+                "line": 7,
+                "quote": "I’m proud of what we accomplished, but I’m even more grateful for how we accomplished it. People stepped in when teammates needed help. You challenged ideas because you cared about making them better. You solved problems that weren’t in any plan, and you kept moving forward when the answer wasn’t obvious. Every contribution mattered, including the quiet work that happened behind the scenes and didn’t always get the recognition it deserved."
+              },
+              "why": "Help for teammates, challenging ideas and solving unplanned problems are narrated as actual past behavior."
+            },
+            {
+              "classification": "Unsupported progress characterization",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-3/B/outputs/end-of-year-dinner-speech.md",
+                "line": 11,
+                "quote": "It’s also a chance to look ahead. In March, we’ll launch the product we’ve been working so hard to bring to life. There’s still plenty to do between now and then, but we’re not standing at the beginning. We’re arriving with everything we learned this year, real momentum behind us, and a team I would trust with any challenge."
+              },
+              "why": "Real momentum and lessons learned are asserted without supplied evidence."
+            }
+          ],
+          "notes": "Response claims a two-minute ready speech but measured primary text exceeds the slot."
+        }
+      },
+      "timing": {
+        "A": {
+          "file": "evals/independent-review-iteration-2/eval-3/A/outputs/speeches/end-of-year-march-launch/script.md",
+          "lines": [
+            33,
+            59
+          ],
+          "spoken_words": 200,
+          "long_pauses": 3,
+          "explicitly_timed_moments_seconds": 0,
+          "calculated_seconds": 99.8076923076923,
+          "slot_seconds": 120,
+          "limit_seconds": 108.0,
+          "passes_90_percent": true,
+          "assumed_slot_seconds": null,
+          "assumed_slot_pass": null
+        },
+        "B": {
+          "file": "evals/independent-review-iteration-2/eval-3/B/outputs/end-of-year-dinner-speech.md",
+          "lines": [
+            1,
+            17
+          ],
+          "spoken_words": 285,
+          "long_pauses": 0,
+          "explicitly_timed_moments_seconds": 0,
+          "calculated_seconds": 131.53846153846155,
+          "slot_seconds": 120,
+          "limit_seconds": 108.0,
+          "passes_90_percent": false,
+          "assumed_slot_seconds": null,
+          "assumed_slot_pass": null
+        }
+      },
+      "winner": {
+        "variant": "A",
+        "expectation_passes": {
+          "A": 6,
+          "B": 1
+        },
+        "why": "A honors the just-write override with a complete, sourced-by-brief speech, explicit assumptions and unconfirmed message, and a properly timed toast. B overflows and invents historical details."
+      }
+    },
+    {
+      "id": 4,
+      "expectations": {
+        "A": [
+          {
+            "expectation": 1,
+            "result": "FAIL",
+            "rationale": "Asserts qualitative criticality of scheduling for Polish target clinics without source or an assumption marker. Company expansion is also stated as plan without supplied support.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/A/outputs/market-script.md",
+                "line": 9,
+                "quote": "Here is the opportunity. / We begin with one clear customer: dental clinics in Poland. // But a clinic calendar is more than a list of times. It coordinates dentists, chairs and a flow of appointments. That makes scheduling a recurring, business-critical workflow. // Our beachhead is the verified number of target clinics multiplied by our annual contract value. Growth then comes from winning more clinics and, once the model is proven, taking the same workflow into new geographies. // **Poland is not the ceiling.** It is where we focus, prove we can win, and build the launch point for a larger category."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/A/outputs/market-slide.md",
+                "line": 34,
+                "quote": "- **Leave-behind:** Polish dental clinics are the initial serviceable market. The company can grow by increasing penetration and, after validating the model, entering additional geographies."
+              }
+            ]
+          },
+          {
+            "expectation": 2,
+            "result": "PASS",
+            "rationale": "Each quantitative placeholder has an explicit NEEDS SOURCE mapping in companion script (A clinic count, B annual contract value, C derived market), plus a source warning on rendered slide. Labels [A]-[C] alone would be insufficient, but they are mapped.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/A/outputs/market-script.md",
+                "line": 17,
+                "quote": "- `[NEEDS SOURCE: A—verified addressable clinic count]`"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/A/outputs/market-script.md",
+                "line": 18,
+                "quote": "- `[NEEDS SOURCE: B—actual or defensible annual contract value]`"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/A/outputs/market-script.md",
+                "line": 19,
+                "quote": "- `[NEEDS SOURCE: C—A × B, with currency stated]`"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/A/outputs/slides.marp.md",
+                "line": 59,
+                "quote": "###### [NEEDS SOURCE: clinic count · ACV · calculation]"
+              }
+            ]
+          },
+          {
+            "expectation": 3,
+            "result": "PASS",
+            "rationale": "Clinics multiplied by annual contract value is annual market currency; alternate seat-based equation also matches count to annual per-seat revenue. No monthly/annual mismatch.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/A/outputs/market-slide.md",
+                "line": 17,
+                "quote": "  `[A] clinics × [B] ACV = [C] Poland SAM`"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/A/outputs/market-slide.md",
+                "line": 43,
+                "quote": "If pricing is per seat rather than per clinic, replace the equation with:"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/A/outputs/market-slide.md",
+                "line": 45,
+                "quote": "`addressable seats × annual revenue per seat = Poland SAM`"
+              }
+            ]
+          },
+          {
+            "expectation": 4,
+            "result": "FAIL",
+            "rationale": "Names needed data and units but does not name source types or reference years for each placeholder. Current is not a named year; no source institution/dataset type is supplied.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/A/outputs/market-slide.md",
+                "line": 38,
+                "quote": "- `[NEEDS SOURCE: current number of active, addressable dental-clinic locations in Poland; define location versus legal entity and public versus private]`"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/A/outputs/market-slide.md",
+                "line": 39,
+                "quote": "- `[NEEDS SOURCE: actual or target annual contract value using the company’s real pricing unit—clinic, location, chair or practitioner]`"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/A/outputs/market-slide.md",
+                "line": 40,
+                "quote": "- `[NEEDS SOURCE: transparent calculation of C = A × B, including currency and conversion date if applicable]`"
+              }
+            ]
+          }
+        ],
+        "B": [
+          {
+            "expectation": 1,
+            "result": "FAIL",
+            "rationale": "Claims unverified no-show and staff-efficiency benefits, revenue loss and product expansion capabilities as facts.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/B/outputs/market-slide-and-script.md",
+                "line": 34,
+                "quote": "For a dental clinic, time is inventory. When an appointment is cancelled, a chair sits empty and that revenue disappears forever. That makes scheduling a daily, mission-critical workflow—and the natural control point for the entire clinic."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/B/outputs/market-slide-and-script.md",
+                "line": 36,
+                "quote": "We start in Poland with a focused product that helps clinics fill chairs, reduce no-shows, and run staff more efficiently. From there, we expand into the workflows surrounding every appointment: recalls, patient communication, treatment follow-ups, payments, and analytics. The same platform can then serve larger clinic groups and new European markets."
+              }
+            ]
+          },
+          {
+            "expectation": 2,
+            "result": "FAIL",
+            "rationale": "No NEEDS SOURCE markers for clinic count or annual contract value; only an optional formula after figures are verified. There are no invented market figures, but required numeric evidence placeholders are absent.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/B/outputs/market-slide-and-script.md",
+                "line": 26,
+                "quote": "*Optional sizing footer once figures are verified: Poland SAM = target clinic locations × annual contract value. European TAM = addressable locations × expanded platform value.*"
+              }
+            ]
+          },
+          {
+            "expectation": 3,
+            "result": "PASS",
+            "rationale": "The explicit Poland equation uses locations times annual contract value, which is dimensionally consistent. European expanded platform value is underspecified, but no concrete monthly/annual mismatch appears; do not invent a failure clause requiring a more detailed model.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/B/outputs/market-slide-and-script.md",
+                "line": 26,
+                "quote": "*Optional sizing footer once figures are verified: Poland SAM = target clinic locations × annual contract value. European TAM = addressable locations × expanded platform value.*"
+              }
+            ]
+          },
+          {
+            "expectation": 4,
+            "result": "FAIL",
+            "rationale": "Provides neither source type nor year, nor a missing-number-to-source mapping; formula alone does not satisfy compound criterion.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-4/B/outputs/market-slide-and-script.md",
+                "line": 26,
+                "quote": "*Optional sizing footer once figures are verified: Poland SAM = target clinic locations × annual contract value. European TAM = addressable locations × expanded platform value.*"
+              }
+            ]
+          }
+        ]
+      },
+      "scores": {
+        "A": {
+          "goal_message": 3,
+          "story_visuals": 3,
+          "cta": 2,
+          "accuracy": 1,
+          "timing": 3,
+          "rationale": "Readable beachhead narrative and visual equation, but no sourced scale evidence; unsupported critical-workflow and geographic expansion claims. Segment has no user slot, so timing provisional3; assumed60s calculation is sound."
+        },
+        "B": {
+          "goal_message": 2,
+          "story_visuals": 2,
+          "cta": 2,
+          "accuracy": 1,
+          "timing": 3,
+          "rationale": "Inflates scheduling into a dental operating system without evidence, with three invented expansion tracks. No actual market sizing or citation plan. Standalone section has no confirmed slot; timing provisional3."
+        }
+      },
+      "facts": {
+        "A": {
+          "unsupported_or_deduced": [
+            {
+              "classification": "Unsupported qualitative market claim and expansion plan",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-4/A/outputs/market-script.md",
+                "line": 9,
+                "quote": "Here is the opportunity. / We begin with one clear customer: dental clinics in Poland. // But a clinic calendar is more than a list of times. It coordinates dentists, chairs and a flow of appointments. That makes scheduling a recurring, business-critical workflow. // Our beachhead is the verified number of target clinics multiplied by our annual contract value. Growth then comes from winning more clinics and, once the model is proven, taking the same workflow into new geographies. // **Poland is not the ceiling.** It is where we focus, prove we can win, and build the launch point for a larger category."
+              },
+              "why": "Business-critical workflow is a factual characterization of the Polish customer market without evidence. Growth through new geographies is narrated as company strategy rather than explicitly proposed. The same text repeats in Marp speaker notes line63."
+            },
+            {
+              "classification": "Unsupported expansion feasibility in companion leave-behind",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-4/A/outputs/market-slide.md",
+                "line": 34,
+                "quote": "- **Leave-behind:** Polish dental clinics are the initial serviceable market. The company can grow by increasing penetration and, after validating the model, entering additional geographies."
+              },
+              "why": "Company can grow via penetration and additional geographies is not established by the prompt."
+            }
+          ],
+          "qualified_or_safe": [
+            {
+              "file": "evals/independent-review-iteration-2/eval-4/A/outputs/market-slide.md",
+              "line": 23,
+              "quote": "  Keep the Poland market solid; use a dotted line for geographic expansion to show that it is an expansion thesis, not validated revenue."
+            },
+            {
+              "file": "evals/independent-review-iteration-2/eval-4/A/outputs/market-slide.md",
+              "line": 41,
+              "quote": "- `[NEEDS SOURCE: product, regulatory, language and go-to-market evidence before counting new geographies in TAM]`"
+            }
+          ],
+          "notes": "No numeric market facts fabricated. Dotted-line expansion is explicitly an unvalidated thesis in the slide production note, but spoken text/leave-behind do not retain that qualification. Optional sourced insert is outside primary timing."
+        },
+        "B": {
+          "unsupported_or_deduced": [
+            {
+              "classification": "Unproven clinic economics and positioning",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-4/B/outputs/market-slide-and-script.md",
+                "line": 5,
+                "quote": "**Every empty chair is perishable revenue.** Scheduling sits at the center of how dental clinics earn, retain patients, and use staff."
+              },
+              "why": "Empty chairs always lose revenue and scheduling governs patient retention are unsupported qualitative claims."
+            },
+            {
+              "classification": "Invented capabilities and expansion strategy",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-4/B/outputs/market-slide-and-script.md",
+                "line": 36,
+                "quote": "We start in Poland with a focused product that helps clinics fill chairs, reduce no-shows, and run staff more efficiently. From there, we expand into the workflows surrounding every appointment: recalls, patient communication, treatment follow-ups, payments, and analytics. The same platform can then serve larger clinic groups and new European markets."
+              },
+              "why": "Prompt gives scheduling software only; reducing no-shows, efficient staffing, recalls, follow-ups, payments and analytics capabilities/roadmap are added."
+            },
+            {
+              "classification": "Unsupported market-scale claim",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-4/B/outputs/market-slide-and-script.md",
+                "line": 24,
+                "quote": "> **Poland gives us a focused entry point into a much larger European dental software category.**"
+              },
+              "why": "Much larger European category is asserted with no evidence."
+            }
+          ],
+          "notes": "Companion response repeats the invented broader platform positioning. More modules, more markets and multi-site operations are new company strategy, not marked assumptions. No quantitative market data supplied or invented."
+        }
+      },
+      "timing": {
+        "A": {
+          "file": "evals/independent-review-iteration-2/eval-4/A/outputs/market-script.md",
+          "lines": [
+            9,
+            9
+          ],
+          "spoken_words": 99,
+          "long_pauses": 3,
+          "explicitly_timed_moments_seconds": 0,
+          "calculated_seconds": 53.19230769230769,
+          "slot_seconds": null,
+          "limit_seconds": null,
+          "passes_90_percent": null,
+          "assumed_slot_seconds": 60,
+          "assumed_slot_pass": true
+        },
+        "B": {
+          "file": "evals/independent-review-iteration-2/eval-4/B/outputs/market-slide-and-script.md",
+          "lines": [
+            32,
+            38
+          ],
+          "spoken_words": 135,
+          "long_pauses": 0,
+          "explicitly_timed_moments_seconds": 0,
+          "calculated_seconds": 62.307692307692314,
+          "slot_seconds": null,
+          "limit_seconds": null,
+          "passes_90_percent": null,
+          "assumed_slot_seconds": null,
+          "assumed_slot_pass": null
+        }
+      },
+      "winner": {
+        "variant": "A",
+        "expectation_passes": {
+          "A": 2,
+          "B": 1
+        },
+        "why": "A at least provides source placeholders and dimensionally consistent sizing with a clear evidence-equation visual. Both fail factual discipline and complete source specifications; B also fabricates extensive product/platform capabilities."
+      }
+    }
+  ]
+}

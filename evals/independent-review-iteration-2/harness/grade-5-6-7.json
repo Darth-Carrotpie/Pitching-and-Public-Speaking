@@ -1,0 +1,866 @@
+{
+  "review": "Fresh independent grading of canonical cases5,6,7 against harness/suite.json; no round1 judgments read.",
+  "criteria_source": "evals/independent-review-iteration-2/harness/suite.json",
+  "method": {
+    "scores": "Integers1-5 for goal/message, story/visuals, CTA, accuracy, timing. Timing with no supplied slot or no drafted primary script is provisional3.",
+    "timing": "Primary spoken version only; strip headings, stage cues and pause tokens; em/en dashes separate words, ordinary hyphens/apostrophes remain within words. Count optional cuts included in primary script; omit optional inserts, alternative openings and post-Q&A closes. Each //=2.5s; add explicit timed moments. Untimed pause directions are noted separately without inventing durations.",
+    "tool_wait": "No-tool-wait is evaluated for actual tool dependence; drafting without a formal message gate is not treated as waiting for a tool. Exact fallback filename is independently required by expectation4."
+  },
+  "all_files_read": [
+    "evals/independent-review-iteration-2/eval-5/A/outputs/response.md",
+    "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/brief.md",
+    "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/notes.md",
+    "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/rehearsal.md",
+    "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/script.md",
+    "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/slides.marp.md",
+    "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/slides.md",
+    "evals/independent-review-iteration-2/eval-5/B/outputs/feedback-talk-script.md",
+    "evals/independent-review-iteration-2/eval-5/B/outputs/feedback-talk-slides.md",
+    "evals/independent-review-iteration-2/eval-5/B/outputs/response.md",
+    "evals/independent-review-iteration-2/eval-6/A/outputs/response.md",
+    "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/brief.md",
+    "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/notes.md",
+    "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/rehearsal.md",
+    "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/script.md",
+    "evals/independent-review-iteration-2/eval-6/B/outputs/response.md",
+    "evals/independent-review-iteration-2/eval-7/A/outputs/response.md",
+    "evals/independent-review-iteration-2/eval-7/B/outputs/response.md"
+  ],
+  "cases": [
+    {
+      "id": 5,
+      "expectations": {
+        "A": [
+          {
+            "expectation": 1,
+            "result": "PASS",
+            "rationale": "Plain no-callable-tool statement identifies the supplied tool/skill list as the check; fixture confirms no tools.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/brief.md",
+                "line": 17,
+                "quote": "- **Tool check:** No callable slide-building tool was available in the supplied tool and skill list. The host can deliver text files, so a renderable Marp fallback is included."
+              }
+            ]
+          },
+          {
+            "expectation": 2,
+            "result": "PASS",
+            "rationale": "Three routes explicitly include Marp VSCode/CLI, connect a tool and recreate slides from spec.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/A/outputs/response.md",
+                "line": 5,
+                "quote": "To build the deck, open `slides.marp.md` with the Marp VS Code extension or run `npx @marp-team/marp-cli@latest slides.marp.md --pptx`. Alternatively, connect a slide-building tool or recreate the six slides from `slides.md`."
+              }
+            ]
+          },
+          {
+            "expectation": 3,
+            "result": "PASS",
+            "rationale": "Does not block for slide tooling; proceeds with assumptions and candidate messages. Separate drafting gate compliance is not part of this tool-wait criterion.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/brief.md",
+                "line": 3,
+                "quote": "Status: complete single-turn draft; assumptions and message are unconfirmed."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/brief.md",
+                "line": 17,
+                "quote": "- **Tool check:** No callable slide-building tool was available in the supplied tool and skill list. The host can deliver text files, so a renderable Marp fallback is included."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/brief.md",
+                "line": 27,
+                "quote": "| **Feedback is a core developer skill, not a soft extra.** | Pass | Pass | Pass | Pass |"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/brief.md",
+                "line": 31,
+                "quote": "**Selected, unconfirmed:** Feedback is a core developer skill, not a soft extra."
+              }
+            ]
+          },
+          {
+            "expectation": 4,
+            "result": "PASS",
+            "rationale": "Drafting occurs and exact slides.marp.md file is present with valid Marp header/content.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/slides.marp.md",
+                "line": 2,
+                "quote": "marp: true"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/slides.marp.md",
+                "line": 44,
+                "quote": "# A three-word review can stop the work."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/A/outputs/response.md",
+                "line": 5,
+                "quote": "To build the deck, open `slides.marp.md` with the Marp VS Code extension or run `npx @marp-team/marp-cli@latest slides.marp.md --pptx`. Alternatively, connect a slide-building tool or recreate the six slides from `slides.md`."
+              }
+            ]
+          },
+          {
+            "expectation": 5,
+            "result": "PASS",
+            "rationale": "Workshop claims are limited to free/date; logistics remain source markers. Five-second hold is presentation timing, not a claim about registration duration.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/brief.md",
+                "line": 15,
+                "quote": "- **Workshop:** Free and held on 12 November, as supplied. “12 November” is assumed to mean 12 November 2026."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/brief.md",
+                "line": 19,
+                "quote": "- **Needed for questions or event promotion:** [NEEDS SOURCE: workshop time, venue or online status, agenda, facilitator and accessibility details]."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/script.md",
+                "line": 97,
+                "quote": "On 12 November, we are running a free feedback workshop. Scan the code on screen and sign up now."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/rehearsal.md",
+                "line": 47,
+                "quote": "| **9. What happens at the workshop, and how do I join?** | State only the confirmed facts: it is free and on 12 November. Then point to the published signup details. | [NEEDS SOURCE: signup URL, time, venue or online status, agenda, facilitator and accessibility details] |"
+              }
+            ]
+          }
+        ],
+        "B": [
+          {
+            "expectation": 1,
+            "result": "FAIL",
+            "rationale": "No no-tool-status statement or explanation of check appears in any of the three outputs. Fixture has no tools, but that does not excuse omitted status.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/B/outputs/response.md",
+                "line": 1,
+                "quote": "Created a concise six-slide, five-minute meetup talk with a timed speaker script and a direct workshop call to action. Before presenting, replace the sign-up URL and QR placeholders on the final slide."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/B/outputs/feedback-talk-script.md",
+                "line": 6,
+                "quote": "Before presenting, replace the QR-code and URL placeholders on slide 6. Keep the registration page open on your phone in case someone wants the link afterward."
+              }
+            ]
+          },
+          {
+            "expectation": 2,
+            "result": "FAIL",
+            "rationale": "Provides Marp-compatible markdown but no render command/VSCode route, connect-tool route or rebuild-from-spec route.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/B/outputs/response.md",
+                "line": 1,
+                "quote": "Created a concise six-slide, five-minute meetup talk with a timed speaker script and a direct workshop call to action. Before presenting, replace the sign-up URL and QR placeholders on the final slide."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/B/outputs/feedback-talk-slides.md",
+                "line": 2,
+                "quote": "marp: true"
+              }
+            ]
+          },
+          {
+            "expectation": 3,
+            "result": "PASS",
+            "rationale": "No tooling question or pause blocks progress: it delivers tool-independent content and takes a chosen message. The literal next-step examples mention intake/message gate with defaults, but this criterion primarily tests not waiting on tools; do not convert unrelated over-drafting into tool blocking.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/B/outputs/response.md",
+                "line": 1,
+                "quote": "Created a concise six-slide, five-minute meetup talk with a timed speaker script and a direct workshop call to action. Before presenting, replace the sign-up URL and QR placeholders on the final slide."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/B/outputs/feedback-talk-script.md",
+                "line": 4,
+                "quote": "**Goal:** Get attendees to register for the free feedback workshop on 12 November 2026."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/B/outputs/feedback-talk-slides.md",
+                "line": 53,
+                "quote": "# Feedback is a developer skill"
+              }
+            ]
+          },
+          {
+            "expectation": 4,
+            "result": "FAIL",
+            "rationale": "Drafts a script but only feedback-talk-slides.md exists for the deck; exact slides.marp.md required by the expectation is absent.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/B/outputs/feedback-talk-slides.md",
+                "line": 2,
+                "quote": "marp: true"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/B/outputs/feedback-talk-script.md",
+                "line": 1,
+                "quote": "# Feedback is a developer skill — speaker script"
+              }
+            ]
+          },
+          {
+            "expectation": 5,
+            "result": "FAIL",
+            "rationale": "Invents workshop practice content and tells participants to bring real conversations. Date/free were supplied, exercises/format were not.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/B/outputs/feedback-talk-script.md",
+                "line": 66,
+                "quote": "That is what our free feedback workshop on **12 November** is for: a place to practise turning real, uncomfortable moments into conversations that move the work forward."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/B/outputs/feedback-talk-script.md",
+                "line": 68,
+                "quote": "If one conversation came to mind during this talk—a review you are avoiding, a teammate you cannot quite reach, or feedback you need to phrase better—bring that one."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-5/B/outputs/feedback-talk-slides.md",
+                "line": 130,
+                "quote": "Bring one conversation you want to handle better."
+              }
+            ]
+          }
+        ]
+      },
+      "scores": {
+        "A": {
+          "goal_message": 5,
+          "story_visuals": 4,
+          "cta": 5,
+          "accuracy": 5,
+          "timing": 5,
+          "rationale": "Clear feedback-as-developer-skill message, concrete hypothetical PR examples and simple diagrams; strong date-specific QR signup CTA. Keeps workshop logistics unknown and explicitly times the QR hold.260.9s fits270s."
+        },
+        "B": {
+          "goal_message": 4,
+          "story_visuals": 3,
+          "cta": 4,
+          "accuracy": 1,
+          "timing": 3,
+          "rationale": "Useful three-field pattern and dated signup ask, but fake speaker admission and invented workshop content compromise accuracy. Word time256.2s fits270s before unspecified reaction/QR pauses; timeline allocates all300s without buffer and ends on Thank you."
+        }
+      },
+      "facts": {
+        "A": {
+          "unsupported_or_deduced": [],
+          "notes": "Seven files reviewed. PR examples are explicitly hypothetical in brief and rehearsal; no invented workshop duration, format, exercises, facilitator or signup completion time found.2026 is explicitly an assumption. Five-second silence is a chosen delivery action, not a signup time guarantee."
+        },
+        "B": {
+          "unsupported_or_deduced": [
+            {
+              "classification": "Invented speaker experience",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-5/B/outputs/feedback-talk-script.md",
+                "line": 20,
+                "quote": "Me too. The problem usually isn’t intelligence or intent. We learned syntax, testing and architecture, but many of us were never taught how to make feedback usable."
+              },
+              "why": "Me too following a request to raise hands for writing useless Friday review comments attributes an unprovided personal history to the speaker."
+            },
+            {
+              "classification": "Invented workshop agenda/exercise format",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-5/B/outputs/feedback-talk-script.md",
+                "line": 66,
+                "quote": "That is what our free feedback workshop on **12 November** is for: a place to practise turning real, uncomfortable moments into conversations that move the work forward."
+              },
+              "why": "A place to practise turning real uncomfortable moments into conversations is not provided by the prompt."
+            },
+            {
+              "classification": "Invented workshop preparation instruction",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-5/B/outputs/feedback-talk-slides.md",
+                "line": 130,
+                "quote": "Bring one conversation you want to handle better."
+              },
+              "why": "Bring one conversation repeats an unconfirmed real-conversation exercise requirement."
+            },
+            {
+              "classification": "Unmarked calendar-year assumption",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-5/B/outputs/feedback-talk-slides.md",
+                "line": 123,
+                "quote": "<span class=\"date\">12 November 2026</span>"
+              },
+              "why": "2026 is plausible from current date but was not supplied as the workshop year. This is a date assumption rather than invented agenda."
+            }
+          ],
+          "notes": "No invented quantitative outcomes or workshop duration. QR/URL are plainly placeholders. General advice and illustrative code comments are pedagogical examples, not claims about an actual repository."
+        }
+      },
+      "timing": {
+        "A": {
+          "file": "evals/independent-review-iteration-2/eval-5/A/outputs/speeches/feedback-developer-skill/script.md",
+          "lines": [
+            35,
+            101
+          ],
+          "spoken_words": 522,
+          "long_pauses": 6,
+          "explicitly_timed_moments_seconds": 5,
+          "calculated_seconds": 260.9230769230769,
+          "slot_seconds": 300,
+          "limit_seconds": 270.0,
+          "passes_90_percent": true
+        },
+        "B": {
+          "file": "evals/independent-review-iteration-2/eval-5/B/outputs/feedback-talk-script.md",
+          "lines": [
+            10,
+            76
+          ],
+          "spoken_words": 555,
+          "long_pauses": 0,
+          "explicitly_timed_moments_seconds": 0,
+          "calculated_seconds": 256.15384615384613,
+          "slot_seconds": 300,
+          "limit_seconds": 270.0,
+          "passes_90_percent": true,
+          "notes": "Three untimed stage directions: reaction pause at14, hand raise at18, QR pause at72. Their duration is unspecified and cannot be added numerically;256.15s is a lower bound before those moments. Displayed slide timeline consumes300s, unlike90% target."
+        }
+      },
+      "winner": {
+        "variant": "A",
+        "expectation_passes": {
+          "A": 5,
+          "B": 1
+        },
+        "why": "A supplies checked tooling status, three routes, exact fallback artifact and disciplined workshop facts. B delivers a usable draft but omits required fallback handoff details and invents speaker/workshop content."
+      }
+    },
+    {
+      "id": 6,
+      "expectations": {
+        "A": [
+          {
+            "expectation": 1,
+            "result": "PASS",
+            "rationale": "No slides produced and brief explicitly assumes none.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/brief.md",
+                "line": 6,
+                "quote": "- There are no slides or formal questions afterward."
+              }
+            ]
+          },
+          {
+            "expectation": 2,
+            "result": "PASS",
+            "rationale": "Names become belonging; sweets become welcome and a lasting example, driving emotional meaning and summary.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/script.md",
+                "line": 13,
+                "quote": "First, there was the welcome. Rasa knew every regular by name. / That sounds like a small thing, but it never is. A name says, “I see you. You belong here.” / [SKIP IF LATE] In a place full of stories, Rasa made sure the people who returned were never strangers."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/script.md",
+                "line": 17,
+                "quote": "Then there was the jar of sweets on the desk. It was simple, cheerful, and unmistakably Rasa. / You might come looking for a book, but you could also find a sweet and a little warmth. That jar said, without making a fuss, “There is something here for you.” //"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/script.md",
+                "line": 21,
+                "quote": "And that is what Rasa leaves with us after thirty years: a way of making people feel known. / The sweets may disappear quickly; the example will not. We can keep it alive whenever we remember a name, offer a kindness, or make room for one more person. //"
+              }
+            ]
+          },
+          {
+            "expectation": 3,
+            "result": "PASS",
+            "rationale": "Ends on a performable retirement wish plus shared applause. Applause requires no drinks, so it substantively supplies the no-drink shared-action option without a redundant glass-toast variant.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/script.md",
+                "line": 25,
+                "quote": "[MEMORIZE] So we will remember three things: **a warm welcome, a sweet gesture, and a lasting example**. / Rasa, may retirement return the care you gave this library. / Everyone, please join me in applauding Rasa and wishing her a long and happy retirement."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/brief.md",
+                "line": 45,
+                "quote": "A toast structure was not selected because no glasses or toast setting were specified. A full story structure was not selected because no complete personal anecdote was supplied."
+              }
+            ]
+          },
+          {
+            "expectation": 4,
+            "result": "PASS",
+            "rationale": "Uses supplied names/sweets/30years and emotional interpretation. The imagined visitor is marked You might, not narrated as an actual event; jar said is plainly personification. Optional anecdote explicitly requires a true memory.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/script.md",
+                "line": 17,
+                "quote": "Then there was the jar of sweets on the desk. It was simple, cheerful, and unmistakably Rasa. / You might come looking for a book, but you could also find a sweet and a little warmth. That jar said, without making a fuss, “There is something here for you.” //"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/script.md",
+                "line": 39,
+                "quote": "To personalize the speech without lengthening it, replace the `[SKIP IF LATE]` sentence with one true memory of up to 16 words about Rasa greeting a regular or offering a sweet."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/brief.md",
+                "line": 33,
+                "quote": "A farewell based on limited details can become generic or overly sentimental. The speech avoids that by building around the two concrete details supplied—the names and the sweets—and inventing no anecdotes."
+              }
+            ]
+          },
+          {
+            "expectation": 5,
+            "result": "PASS",
+            "rationale": "217 words and3 long pauses=107.6538s, below108s by0.3462s.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/script.md",
+                "line": 3,
+                "quote": "217 words = 100.2 s · 3 long pauses = 7.5 s · **total 107.7 s** · limit 108 s (90% of 2 minutes)"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/script.md",
+                "line": 9,
+                "quote": "[MEMORIZE] We often think a library is built from books and shelves. / But over thirty years, Rasa showed us that it is also built from **welcome, kindness, and care**. / Rasa made this library feel like home. //"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/script.md",
+                "line": 17,
+                "quote": "Then there was the jar of sweets on the desk. It was simple, cheerful, and unmistakably Rasa. / You might come looking for a book, but you could also find a sweet and a little warmth. That jar said, without making a fuss, “There is something here for you.” //"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/script.md",
+                "line": 21,
+                "quote": "And that is what Rasa leaves with us after thirty years: a way of making people feel known. / The sweets may disappear quickly; the example will not. We can keep it alive whenever we remember a name, offer a kindness, or make room for one more person. //"
+              }
+            ]
+          }
+        ],
+        "B": [
+          {
+            "expectation": 1,
+            "result": "PASS",
+            "rationale": "Only response.md speech, no slides.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/B/outputs/response.md",
+                "line": 1,
+                "quote": "Today, we’re saying farewell to someone who has been part of the heart of this library for 30 years."
+              }
+            ]
+          },
+          {
+            "expectation": 2,
+            "result": "PASS",
+            "rationale": "Names/sweets support belonging, kindness and a retirement sweets-jar wish; more than passing mentions.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/B/outputs/response.md",
+                "line": 3,
+                "quote": "Rasa, over those three decades, you have done far more than help people find books. You made this library feel like a place where everyone belonged. You knew every regular by name—and, somehow, you often seemed to know exactly what they were looking for before they did. Whether someone came in for a favorite author, a quiet corner, or simply a familiar face, they knew they would find a warm welcome from you."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/B/outputs/response.md",
+                "line": 5,
+                "quote": "And, of course, there was always the jar of sweets on the desk. It was a small gesture, but it said so much about you: thoughtful, generous, and always ready to make someone’s day a little brighter. I suspect many people stopped by for a book and left with a sweet, a smile, and a good conversation."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/B/outputs/response.md",
+                "line": 9,
+                "quote": "Rasa, thank you for your dedication, your kindness, your patience, and all the memories. We hope retirement brings you plenty of time for your own reading, new adventures, and perhaps a well-stocked jar of sweets just for you."
+              }
+            ]
+          },
+          {
+            "expectation": 3,
+            "result": "FAIL",
+            "rationale": "A retirement wish is present, but no shared audience action or no-drinks alternative appears. Last congratulatory statement alone is not performable collective toast.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/B/outputs/response.md",
+                "line": 9,
+                "quote": "Rasa, thank you for your dedication, your kindness, your patience, and all the memories. We hope retirement brings you plenty of time for your own reading, new adventures, and perhaps a well-stocked jar of sweets just for you."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/B/outputs/response.md",
+                "line": 11,
+                "quote": "Congratulations on your retirement. You will be deeply missed, warmly remembered, and always welcome back."
+              }
+            ]
+          },
+          {
+            "expectation": 4,
+            "result": "FAIL",
+            "rationale": "Adds unprovided ability to anticipate visitors reading wants and assumes books/questions/encouragement duties and history. I suspect flags one sweets-visit conjecture but not the other claims.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/B/outputs/response.md",
+                "line": 3,
+                "quote": "Rasa, over those three decades, you have done far more than help people find books. You made this library feel like a place where everyone belonged. You knew every regular by name—and, somehow, you often seemed to know exactly what they were looking for before they did. Whether someone came in for a favorite author, a quiet corner, or simply a familiar face, they knew they would find a warm welcome from you."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/B/outputs/response.md",
+                "line": 7,
+                "quote": "Thirty years of service is an extraordinary achievement. Think of all the readers you have encouraged, all the questions you have answered, and all the lives you have touched—often in ways you may never fully know. The library will not feel quite the same without you here."
+              }
+            ]
+          },
+          {
+            "expectation": 5,
+            "result": "FAIL",
+            "rationale": "251 spoken words and no marked pauses=115.8462s, above108s limit even before natural delivery pauses.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/B/outputs/response.md",
+                "line": 1,
+                "quote": "Today, we’re saying farewell to someone who has been part of the heart of this library for 30 years."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-6/B/outputs/response.md",
+                "line": 11,
+                "quote": "Congratulations on your retirement. You will be deeply missed, warmly remembered, and always welcome back."
+              }
+            ]
+          }
+        ]
+      },
+      "scores": {
+        "A": {
+          "goal_message": 5,
+          "story_visuals": 5,
+          "cta": 5,
+          "accuracy": 5,
+          "timing": 4,
+          "rationale": "Consistent home/welcome message grounded in supplied names and sweets, warm metaphor, three-part rhythm and shared applause. No factual invention found.107.65s fits but leaves only0.35s inside the required108s ceiling."
+        },
+        "B": {
+          "goal_message": 4,
+          "story_visuals": 4,
+          "cta": 2,
+          "accuracy": 1,
+          "timing": 2,
+          "rationale": "Warm belonging and sweets imagery, but invents individual behaviors/history. Closing has a wish without shared audience action.115.85s violates108s though below full120s slot."
+        }
+      },
+      "facts": {
+        "A": {
+          "unsupported_or_deduced": [],
+          "notes": "Five files reviewed. Warm welcome/home are evaluative tribute language; You might marks the imagined visit. Personifying the jar is figurative. Alternative opening values the jar rather than asserting a new event. Optional personal memory is clearly separate and must be true."
+        },
+        "B": {
+          "unsupported_or_deduced": [
+            {
+              "classification": "Invented individual behavior",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-6/B/outputs/response.md",
+                "line": 3,
+                "quote": "Rasa, over those three decades, you have done far more than help people find books. You made this library feel like a place where everyone belonged. You knew every regular by name—and, somehow, you often seemed to know exactly what they were looking for before they did. Whether someone came in for a favorite author, a quiet corner, or simply a familiar face, they knew they would find a warm welcome from you."
+              },
+              "why": "Knowing what visitors sought before they did, and actual visitor purposes/familiarity are unprovided."
+            },
+            {
+              "classification": "Invented occupational history",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-6/B/outputs/response.md",
+                "line": 7,
+                "quote": "Thirty years of service is an extraordinary achievement. Think of all the readers you have encouraged, all the questions you have answered, and all the lives you have touched—often in ways you may never fully know. The library will not feel quite the same without you here."
+              },
+              "why": "Encouraging readers and answering questions are plausible but not supplied facts; the prompt gives library service duration and two specific habits only."
+            }
+          ],
+          "qualified_imagery": [
+            {
+              "file": "evals/independent-review-iteration-2/eval-6/B/outputs/response.md",
+              "line": 5,
+              "quote": "And, of course, there was always the jar of sweets on the desk. It was a small gesture, but it said so much about you: thoughtful, generous, and always ready to make someone’s day a little brighter. I suspect many people stopped by for a book and left with a sweet, a smile, and a good conversation."
+            }
+          ],
+          "notes": "I suspect marks the imagined book/sweet/conversation scene as conjecture; this does not qualify assertions in lines3 and7. Generic heartfelt thanks and future wishes are not themselves factual inventions."
+        }
+      },
+      "timing": {
+        "A": {
+          "file": "evals/independent-review-iteration-2/eval-6/A/outputs/speeches/rasa-retirement/script.md",
+          "lines": [
+            9,
+            25
+          ],
+          "spoken_words": 217,
+          "long_pauses": 3,
+          "explicitly_timed_moments_seconds": 0,
+          "calculated_seconds": 107.65384615384616,
+          "slot_seconds": 120,
+          "limit_seconds": 108.0,
+          "passes_90_percent": true
+        },
+        "B": {
+          "file": "evals/independent-review-iteration-2/eval-6/B/outputs/response.md",
+          "lines": [
+            1,
+            11
+          ],
+          "spoken_words": 251,
+          "long_pauses": 0,
+          "explicitly_timed_moments_seconds": 0,
+          "calculated_seconds": 115.84615384615385,
+          "slot_seconds": 120,
+          "limit_seconds": 108.0,
+          "passes_90_percent": false
+        }
+      },
+      "winner": {
+        "variant": "A",
+        "expectation_passes": {
+          "A": 5,
+          "B": 2
+        },
+        "why": "A grounds emotion in supplied detail, chooses applause usable without drinks and meets timing narrowly. B adds unprovided personal behaviors and misses both shared-action close and time reserve."
+      }
+    },
+    {
+      "id": 7,
+      "expectations": {
+        "A": [
+          {
+            "expectation": 1,
+            "result": "FAIL",
+            "rationale": "Only one goal question/default; no pass/fix scorecard.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/A/outputs/response.md",
+                "line": 1,
+                "quote": "What should the audience do after this Q3 update? Suggested default: **agree on owners and deadlines for the remaining risks while staying aligned on Q3 progress.**"
+              }
+            ]
+          },
+          {
+            "expectation": 2,
+            "result": "FAIL",
+            "rationale": "Does not analyze the five named flaws or attach goal impact and fixes.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/A/outputs/response.md",
+                "line": 1,
+                "quote": "What should the audience do after this Q3 update? Suggested default: **agree on owners and deadlines for the remaining risks while staying aligned on Q3 progress.**"
+              }
+            ]
+          },
+          {
+            "expectation": 3,
+            "result": "FAIL",
+            "rationale": "No top-three issue ranking.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/A/outputs/response.md",
+                "line": 1,
+                "quote": "What should the audience do after this Q3 update? Suggested default: **agree on owners and deadlines for the remaining risks while staying aligned on Q3 progress.**"
+              }
+            ]
+          },
+          {
+            "expectation": 4,
+            "result": "FAIL",
+            "rationale": "No rewritten opening or closing, hence no concrete ask in a rewrite.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/A/outputs/response.md",
+                "line": 1,
+                "quote": "What should the audience do after this Q3 update? Suggested default: **agree on owners and deadlines for the remaining risks while staying aligned on Q3 progress.**"
+              }
+            ]
+          },
+          {
+            "expectation": 5,
+            "result": "PASS",
+            "rationale": "Asks exactly one targeted goal question about what audience should do after the update, with a reasonable suggested default. No extra questions.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/A/outputs/response.md",
+                "line": 1,
+                "quote": "What should the audience do after this Q3 update? Suggested default: **agree on owners and deadlines for the remaining risks while staying aligned on Q3 progress.**"
+              }
+            ]
+          }
+        ],
+        "B": [
+          {
+            "expectation": 1,
+            "result": "FAIL",
+            "rationale": "What works/improve bullet lists do not provide pass/fix per checklist section.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/B/outputs/response.md",
+                "line": 5,
+                "quote": "**What works**"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/B/outputs/response.md",
+                "line": 12,
+                "quote": "**What to improve**"
+              }
+            ]
+          },
+          {
+            "expectation": 2,
+            "result": "FAIL",
+            "rationale": "Identifies list-like content and asks to connect activity/outcomes, but praises the name/thanks opening and question ending and omits no-goal analysis. Thus not every specified flaw receives impact plus fix.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/B/outputs/response.md",
+                "line": 7,
+                "quote": "- Friendly, direct opening"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/B/outputs/response.md",
+                "line": 10,
+                "quote": "- Clean transition to questions"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/B/outputs/response.md",
+                "line": 16,
+                "quote": "3. Group the updates into two or three themes instead of listing ten disconnected facts."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/B/outputs/response.md",
+                "line": 17,
+                "quote": "4. Connect activity to outcomes. Explain what the hiring, launches, migration, and campaigns accomplished."
+              }
+            ]
+          },
+          {
+            "expectation": 3,
+            "result": "FAIL",
+            "rationale": "Six numbered tips are not explicitly top-three ranked by impact on audience action; ordering is not a stated impact ranking.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/B/outputs/response.md",
+                "line": 14,
+                "quote": "1. Lead with the headline: What was the single most important Q3 result?"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/B/outputs/response.md",
+                "line": 18,
+                "quote": "5. Name the main risk and the response to it. “Some risks remain” is too vague."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/B/outputs/response.md",
+                "line": 19,
+                "quote": "6. End with a takeaway or next-quarter priority before inviting questions."
+              }
+            ]
+          },
+          {
+            "expectation": 4,
+            "result": "FAIL",
+            "rationale": "Rewrite retains introduction/thanks and ends Thank you/QA rather than a concrete ask. It also changes tentative customers seem happier into asserted measured improvement with placeholders.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/B/outputs/response.md",
+                "line": 25,
+                "quote": "> Hi everyone, I’m Tom. Thanks for having me."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/B/outputs/response.md",
+                "line": 31,
+                "quote": "> On the customer side, support tickets fell **[X%]**, while **[satisfaction or retention measure]** improved from **[A]** to **[B]**. Marketing also ran six campaigns, generating **[result]**."
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/B/outputs/response.md",
+                "line": 35,
+                "quote": "> Overall, Q3 was about **[concise interpretation]**. In Q4, our priority is **[next objective]**. Thank you—I’m happy to take questions."
+              }
+            ]
+          },
+          {
+            "expectation": 5,
+            "result": "FAIL",
+            "rationale": "No decision-maker/action/deadline goal and no targeted action-goal question. Most important Q3 result is a content question, not what decision is needed from whom by when.",
+            "evidence": [
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/B/outputs/response.md",
+                "line": 14,
+                "quote": "1. Lead with the headline: What was the single most important Q3 result?"
+              },
+              {
+                "file": "evals/independent-review-iteration-2/eval-7/B/outputs/response.md",
+                "line": 35,
+                "quote": "> Overall, Q3 was about **[concise interpretation]**. In Q4, our priority is **[next objective]**. Thank you—I’m happy to take questions."
+              }
+            ]
+          }
+        ]
+      },
+      "scores": {
+        "A": {
+          "goal_message": 2,
+          "story_visuals": 3,
+          "cta": 3,
+          "accuracy": 5,
+          "timing": 3,
+          "rationale": "Useful single goal clarification and safe suggested default, but does not perform requested review or produce rewrites. Story/visuals, CTA delivery and timing cannot be judged, so provisional3."
+        },
+        "B": {
+          "goal_message": 2,
+          "story_visuals": 2,
+          "cta": 1,
+          "accuracy": 2,
+          "timing": 3,
+          "rationale": "Recognizes activity-versus-impact problem but praises weak opening/ending, offers an unranked general checklist and no audience action. Upgrade from tentative happier customers to definite measured improvement and asserted risk response are unsupported. No slot, timing provisional3."
+        }
+      },
+      "facts": {
+        "A": {
+          "unsupported_or_deduced": [],
+          "notes": "Single suggested default proposes owners/deadlines; it does not assert these have been agreed. No added company facts."
+        },
+        "B": {
+          "unsupported_or_deduced": [
+            {
+              "classification": "Unsupported certainty upgrade",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-7/B/outputs/response.md",
+                "line": 31,
+                "quote": "> On the customer side, support tickets fell **[X%]**, while **[satisfaction or retention measure]** improved from **[A]** to **[B]**. Marketing also ran six campaigns, generating **[result]**."
+              },
+              "why": "Customers seem happier does not establish an improved satisfaction/retention measure, while rewritten wording asserts such improvement before placeholder values."
+            },
+            {
+              "classification": "Unconfirmed risk response",
+              "evidence": {
+                "file": "evals/independent-review-iteration-2/eval-7/B/outputs/response.md",
+                "line": 33,
+                "quote": "> The main risk going into Q4 is **[specific risk]**. We’re addressing it by **[action]**, and we’ll track **[measure]** closely."
+              },
+              "why": "Some risks remain does not confirm a main Q4 risk or that an action and tracking process already exist. Brackets leave content unknown, but surrounding assertions remain unqualified."
+            }
+          ],
+          "notes": "No numeric values fabricated: X/A/B and benefit/result slots are placeholders. Revenue growth, hiring, five features, migration, six campaigns and ticket reduction are supplied. Proposed source placeholders are not treated as invented metrics merely for being placeholders."
+        }
+      },
+      "timing": {
+        "A": {
+          "status": "No rewritten primary script or supplied slot; provisional3.",
+          "spoken_words": null,
+          "calculated_seconds": null
+        },
+        "B": {
+          "status": "Review contains proposed fragment/full rewrite with essential blanks, but no slot; timing score provisional3. No primary complete speech is claimed.",
+          "spoken_words": null,
+          "calculated_seconds": null
+        }
+      },
+      "winner": {
+        "variant": "A",
+        "expectation_passes": {
+          "A": 1,
+          "B": 0
+        },
+        "why": "Both substantially miss review deliverables. A at least asks the exact missing action-goal question safely. B gives more content but reinforces the problematic opening/ending, omits a goal and adds unsupported certainty."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+The farewell speech is ready. Its message is “Rasa made this library feel like home,” using a warm tribute structure and ending with a shared round of applause. It runs about 1:48 including pauses, with no unresolved facts. Rehearse the opening and closing first.

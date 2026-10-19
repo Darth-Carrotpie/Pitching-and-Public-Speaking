@@ -1,0 +1,1 @@
+The overrun is a delivery issue, not a length issue: 80 words in 2:10 is 36.9 wpm, and the transcript contains 16 filler expressions. The coaching report includes exact counts, three ranked fixes, a concise rewrite, and a rehearsal drill.

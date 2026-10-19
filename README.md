@@ -174,6 +174,8 @@ fallback, every mode, and Lithuanian output. Run them with Anthropic's
 `skill-creator` skill, or paste the prompts into your agent and check the
 expectations by hand.
 
+Known gaps and the plan for the next improvement sprints are in [ROADMAP.md](ROADMAP.md).
+
 ## Repository layout
 
 ```

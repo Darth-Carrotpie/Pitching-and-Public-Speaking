@@ -1,0 +1,1 @@
+I wrote a ready-to-deliver two-minute speech with a warm thank-you, a forward-looking message about the March launch, and a closing toast.

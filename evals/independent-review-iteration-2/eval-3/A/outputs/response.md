@@ -1,0 +1,1 @@
+Done — the speech runs about 1:40, leaving a comfortable buffer in the two-minute slot. It moves from recognition to the March launch, shared action, and a toast. There are no source gaps; rehearse the marked opening and closing first.

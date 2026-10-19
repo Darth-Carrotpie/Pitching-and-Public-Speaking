@@ -1,0 +1,3 @@
+Skeptical CFO, 5 questions, feedback after each answer.
+
+You’re asking me to spend €80k to move from monthly spreadsheets to daily dashboards. What measurable financial return will that investment produce, and by when?

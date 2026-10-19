@@ -1,0 +1,37 @@
+2026-10-19T14:00:39.918332Z  WARN codex_core::config::managed_features: Ignoring unknown `features` requirement `ultrafast_mode` from requirements layers: enterprise-managed requirements Ultra Fast mode access (rbac-ultrafast-mode), enterprise-managed requirements Computer History access (rbac-computer-history)
+2026-10-19T14:04:15.368612Z ERROR codex_core::tools::router: error=`"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '
+$sections = [ordered]@{
+  Opening = @'"'
+The dining room is empty. In the kitchen, the day's first decision is already being made: how much food should we prepare? Get that number wrong, and a restaurant either runs short or throws value away. Leftover turns that daily prep decision into a clear number chefs can use.
+'@
+  'Daily decision' = @'
+Every morning, chefs must match preparation to the service ahead. Too little can disrupt service. Too much can become prep waste. The decision repeats, item by item, day after day. A tray that becomes prep waste carries both ingredients and work with it. For a restaurant, a better prep decision means less uncertainty before the first order arrives.
+'@
+  'Measured proof' = @'
+Now the proof. Leftover has been piloted in 14 restaurants. Across those pilots, prep waste is down 31 percent. That is not a forecast. It is an operating result from real kitchens. For an investor, it is early evidence that changing one morning decision can create a measurable result by closing time.
+'@
+  'Paying demand' = @'
+Results matter, but investors also need willingness to pay. Nine restaurants now pay €290 per month. They are not just testing the idea. They are paying to make Leftover part of their preparation routine. That gives us two concrete signals: restaurant operators see enough value to pay, and Leftover has the start of a recurring business.
+'@
+  'Early + ask' = @'
+This is early. Fourteen pilots are a starting point, not the finish line. But the signals are concrete: less prep waste, paying restaurants, and a product built around a decision chefs make every morning. We are raising €600,000 to grow from this base. The next step is to show that these results and this willingness to pay repeat across more restaurants.
+'@
+  Closing = @'
+So remember three things: a daily decision, measured proof, and paying demand. Leftover turns uncertain prep into measurable savings. If that matches your investment thesis, speak with me after this session and book a diligence meeting for next week. Let's make every morning's first number a better one.
+'@
+}
+"'$pauses = [ordered]@{ Opening=2; '"'Daily decision'=1; 'Measured proof'=1; 'Paying demand'=1; 'Early + ask'=1; Closing=1 }
+"'$totalWords = 0
+$totalPauses = 0
+foreach ($name in $sections.Keys) {
+  $wordCount = ([regex]::Matches($sections[$name], "'"\\b[\\p{L}\\p{N}€][\\p{L}\\p{N}’'€,-]*\\b\")).Count
+  "'$duration = [math]::Round(($wordCount / 130 * 60) + ($pauses[$name] * 2.5), 1)
+  [pscustomobject]@{Section=$name; Words=$wordCount; LongPauses=$pauses[$name]; Seconds=$duration}
+  $totalWords += $wordCount
+  $totalPauses += $pauses[$name]
+}
+"TOTAL Words=$totalWords Pauses=$totalPauses Seconds=$([math]::Round(($totalWords / 130 * 60) + ($totalPauses * 2.5),1))"
+'` rejected: blocked by policy
+2026-10-19T14:04:15.596999Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `supports_parallel_tool_calls` at line 139 column 5
+2026-10-19T14:04:30.572643Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `supports_parallel_tool_calls` at line 139 column 5
+2026-10-19T14:05:04.303904Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `supports_parallel_tool_calls` at line 139 column 5

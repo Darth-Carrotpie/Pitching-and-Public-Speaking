@@ -1,0 +1,1 @@
+Done — I drafted a stage-ready three-minute pitch for Thursday, 22 October 2026. It emphasizes the 31% waste reduction, nine paying customers, and €600k raise without inventing missing market or product claims. I also included a short investor Q&A checklist.

@@ -1,0 +1,9 @@
+{
+  "eval": 5,
+  "variant": "A",
+  "exit_code": 0,
+  "seconds": 622.12,
+  "setup": "Run with no slide-building tools, skills or connectors available to the agent.",
+  "response_exists": true,
+  "delivered_files": 6
+}

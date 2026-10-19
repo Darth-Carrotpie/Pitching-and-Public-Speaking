@@ -1,0 +1,1 @@
+The `/podium` skill wasn’t available in this session, so I adapted the pitch directly. The 45-second version is ready.

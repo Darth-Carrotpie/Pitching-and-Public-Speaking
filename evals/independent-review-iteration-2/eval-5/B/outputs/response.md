@@ -1,0 +1,1 @@
+Created a concise six-slide, five-minute meetup talk with a timed speaker script and a direct workshop call to action. Before presenting, replace the sign-up URL and QR placeholders on the final slide.

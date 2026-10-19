@@ -1,0 +1,10 @@
+2026-10-19T14:15:20.155358Z  WARN codex_core::config::managed_features: Ignoring unknown `features` requirement `ultrafast_mode` from requirements layers: enterprise-managed requirements Ultra Fast mode access (rbac-ultrafast-mode), enterprise-managed requirements Computer History access (rbac-computer-history)
+2026-10-19T14:18:30.000424Z ERROR codex_core::tools::router: error=`"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$text = @'"'
+On Saturdays, should Market Street move cars—or welcome people?
+Give Market Street back to people on Saturdays.
+Today, cars get the space, while people fit around them.
+For three months, close the street to cars on Saturdays and let people stop, meet and shop.
+Many local shops have already backed that idea: the traders’ association survey found 70 percent in favour.
+Councillors, at the 4 December session, vote yes on the pilot—and give Market Street back to people on Saturdays.
+'@; ("'$text -split '"'\\s+' | Where-Object { "'$_ }).Count; $text -split "`n" | Where-Object { $_ } | ForEach-Object { ($_ -split '"'\\s+' | Where-Object { "'$_ }).Count }'` rejected: blocked by policy
+2026-10-19T14:18:30.008032Z ERROR codex_models_manager::manager: failed to renew cache TTL: missing field `supports_parallel_tool_calls` at line 139 column 5
