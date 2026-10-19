@@ -1,0 +1,13 @@
+{
+  "name": "podium",
+  "version": "0.1.0",
+  "description": "Speeches and decks that get a result: pitches, talks, internal proposals and occasion speeches, from goal and message to script, slide spec, cue cards and rehearsal kit.",
+  "author": {
+    "name": "Danielius",
+    "url": "https://github.com/Darth-Carrotpie"
+  },
+  "homepage": "https://github.com/Darth-Carrotpie/Pitching-and-Public-Speaking",
+  "repository": "https://github.com/Darth-Carrotpie/Pitching-and-Public-Speaking",
+  "license": "MIT",
+  "keywords": ["pitch", "presentation", "public-speaking", "speech", "slides"]
+}

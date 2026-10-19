@@ -1,0 +1,150 @@
+{
+  "skill_name": "podium",
+  "evals": [
+    {
+      "id": 1,
+      "name": "intake-asks-only-missing",
+      "prompt": "I need a 3-minute pitch for investors next Thursday for my startup Leftover. It tells restaurant chefs how much food to prep each morning. 14 pilot restaurants, prep waste down 31%, 9 now pay €290/month. We're raising €600k.",
+      "expected_output": "One batch of at most 6 intake questions about what is still missing (goal shape, speaker, slides or Q&A), each with a suggested default. No script yet.",
+      "files": [],
+      "expectations": [
+        "Does not ask about the length, the audience type or the product, which were already given",
+        "Asks at most 6 questions in a single message",
+        "Every question has a suggested default",
+        "Does not produce a script or slides in this turn"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "message-gate-blocks-drafting",
+      "prompt": "Help me prepare a 10-minute talk for our company all-hands about why we're moving to a four-day week trial. About 200 people, no Q&A, I'll have slides. I'm the CEO.",
+      "expected_output": "A goal written as a verb, 2-3 candidate one-line messages each run through the four tests, at most 3 arguments, the elephant in the room, and a request to confirm before structuring.",
+      "files": [],
+      "expectations": [
+        "States the goal in the form 'after this, who will do what by when'",
+        "Offers 2-3 candidate messages and shows the retell/headline/banner/3-second results",
+        "Names an elephant in the room (e.g. fear about workload or pay)",
+        "Waits for confirmation instead of writing the full script"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "just-write-it-override",
+      "prompt": "Just write it, no questions: a 2-minute speech for my team's end-of-year dinner, thanking them and getting them excited for next year's product launch in March.",
+      "expected_output": "A complete short script, with the assumptions listed and the message marked unconfirmed in the brief.",
+      "files": [],
+      "expectations": [
+        "Produces a complete script without asking questions first",
+        "Lists its assumptions",
+        "Marks the goal and message as unconfirmed",
+        "The script is roughly 230 words or fewer (2 min × 130 wpm × 0.9)",
+        "The final words are not 'thank you'"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "never-invents-facts",
+      "prompt": "Write the market slide and script section for my pitch. We sell scheduling software to dental clinics in Poland. Make the market sound huge. Just write it.",
+      "expected_output": "A slide spec and script section where the market numbers are [NEEDS SOURCE: ...] placeholders, not invented figures.",
+      "files": [],
+      "expectations": [
+        "Contains no invented numbers for market size, clinic count or revenue",
+        "Uses [NEEDS SOURCE: ...] where a number is needed",
+        "Lists the missing sources in the hand-over"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "no-slide-tool-fallback",
+      "prompt": "I need slides and a script for a 5-minute talk at a local meetup about why every developer should learn to give feedback well. Goal: people sign up for our free feedback workshop on 12 November.",
+      "expected_output": "Early on, a short note that no slide tool is connected, with the three options (Marp fallback, connect a tool, build it yourself), then the work continues without waiting. If it gets that far, the hand-over includes slides.marp.md.",
+      "files": [],
+      "expectations": [
+        "Says plainly whether a slide tool was found",
+        "If none was found, explains the Marp fallback with the render command or the VS Code extension",
+        "Mentions connecting a PowerPoint skill or a Slides/Canva/Figma connector as an alternative",
+        "Does not block on the slide-tool answer"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "occasion-no-slides-toast-ending",
+      "prompt": "Write a 2-minute farewell speech for my colleague Rasa, who is retiring after 30 years in our library. She knew every regular by name and always kept a jar of sweets on the desk. Just write it.",
+      "expected_output": "A short story-based speech, no slides, using an image, an emotion and a rhythm device, and ending on a wish or a toast, not on 'thank you'.",
+      "files": [],
+      "expectations": [
+        "Does not produce slides, or recommends skipping them",
+        "Uses the sweets jar or the regulars as a concrete image",
+        "Ends on a wish, a toast or the shared moment, not on 'thank you'",
+        "Does not invent other biographical facts about Rasa"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "review-mode-scorecard",
+      "prompt": "/podium review\n\nHi everyone, my name is Tom and thanks for having me. Today I'll give an overview of our Q3 results. Revenue grew. We hired people. We launched features A, B, C, D and E. We migrated to a new database. Marketing ran six campaigns. Support tickets went down. Customers seem happier. Some risks remain. That's all from me, thank you! Any questions?",
+      "expected_output": "A scorecard against the checklist, the top 3 issues ranked by impact on the goal, and a rewritten opening and closing, before and after.",
+      "files": [],
+      "expectations": [
+        "Shows a scorecard (pass/fix per section)",
+        "Flags the missing goal and message, the 'hello, my name is' opening, too many points, means posing as arguments (database migration), and the 'thank you, any questions' ending",
+        "Ranks the top 3 issues by impact on the goal",
+        "Rewrites the opening and the closing, before and after",
+        "Asks what the audience should do afterwards, or proposes a goal"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "coach-mode-transcript",
+      "prompt": "/podium coach\n\nThis took 2 minutes 10 seconds and my slot is 2 minutes.\n\nSo, um, basically we, like, looked at the onboarding and, you know, it was kind of not great, so we, um, we thought maybe we could try to perhaps change some of the steps, and it is believed that this would, like, help. So yeah. Basically we changed three steps and, um, completion went from 40 to 55 percent, which is, you know, actually pretty good. So, um, we would like to maybe roll it out to everyone. Thank you.",
+      "expected_output": "Pace in wpm against the 120-140 range and the slot, filler counts, hedges and passive voice, the structure check, 3 strengths, 3 fixes with rewritten lines, and one drill.",
+      "files": [],
+      "expectations": [
+        "Computes words per minute from the transcript and the duration",
+        "Counts the filler words (um, like, you know, basically, so)",
+        "Flags hedges ('maybe', 'perhaps', 'try to') and the passive 'it is believed'",
+        "Notes that the strongest fact (40% to 55%) is buried, and the weak 'thank you' ending",
+        "Gives 3 strengths, 3 fixes with rewritten lines, and one drill",
+        "Says a transcript can't show eye contact or gestures"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "spar-mode-one-question",
+      "prompt": "/podium spar\n\nPlay a skeptical CFO. I'm asking for €80k to hire a data engineer so our sales team gets daily dashboards instead of monthly spreadsheets.",
+      "expected_output": "In character, a single tough opening question. No list of questions.",
+      "files": [],
+      "expectations": [
+        "Asks exactly one question in this turn",
+        "Stays in character as a skeptical CFO",
+        "Does not answer for the user or give the full scorecard yet"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "adapt-to-elevator",
+      "prompt": "/podium adapt\n\nTurn this into a 45-second elevator version, same goal:\n\nGoal: the city council approves a 3-month pilot closing Market Street to cars on Saturdays.\nMessage: Give Market Street back to people on Saturdays.\nArguments: 1) local shops (traders' association survey: 70% in favour), 2) safety for kids, 3) a cheap, reversible test.\nCTA: vote yes on the pilot at the 4 December session.",
+      "expected_output": "About 85 words or fewer: hook, problem, solution, one proof, ask. It keeps the message and the CTA.",
+      "files": [],
+      "expectations": [
+        "Is roughly 90 words or fewer (45 s × 130 wpm × 0.9 ≈ 88)",
+        "Keeps the message and the CTA (vote yes on 4 December)",
+        "Uses one argument with its proof, not all three",
+        "Uses only the given 70% figure and invents no new numbers"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "lithuanian-output",
+      "prompt": "Padėk paruošti 3 minučių kalbą mokyklos tėvų susirinkimui: noriu, kad tėvai savanoriautų mokyklos sodo projekte. Tiesiog parašyk.",
+      "expected_output": "The speech is written in Lithuanian, with a concrete CTA (sign up, by when) and spoken-language sentences.",
+      "files": [],
+      "expectations": [
+        "The script is in Lithuanian",
+        "The CTA is concrete: how and by when parents sign up (a placeholder date is fine)",
+        "Doesn't end on 'ačiū' or 'thank you'",
+        "Lists its assumptions, since it was told to just write"
+      ]
+    }
+  ]
+}
