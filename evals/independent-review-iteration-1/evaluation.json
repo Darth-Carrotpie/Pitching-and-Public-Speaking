@@ -1,0 +1,1648 @@
+{
+  "title": "Independent evaluation of podium — iteration 1",
+  "date": "2026-10-19",
+  "mapping": {
+    "A": "with_skill/run-1/outputs",
+    "B": "without_skill/run-1/outputs"
+  },
+  "sourceRoot": "C:/Users/Janiz/AppData/Local/Temp/claude/c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking/6a92f5fa-9b34-4663-bf94-ae53693f2e1f/scratchpad/podium-workspace/iteration-1",
+  "testCases": "C:/Users/Janiz/Documents/GitHub/Pitching-and-Public-Speaking/evals/evals.json",
+  "method": [
+    "Read all 45 files under the 22 outputs directories, including all companion speeches files and the HTML source. Did not open any existing grading.json or benchmark files. No repository or supplied output was edited.",
+    "Evaluated each of 46 expectations independently for both runs: 92 judgments. PASS requires the whole expectation, including compound clauses. Count independent answer requests rather than numbered bundles. A generic bracket is not the explicit NEEDS SOURCE marker.",
+    "Complete script means the primary version can be delivered without essential source-dependent blanks. Optional personalization and a complete safe alternative are acceptable. This causes both drafts in case 3 to fail completeness despite making substantial progress.",
+    "Scores in order: goal/message, story/visuals, call to action, accuracy, timing. Five is strong/complete; four has minor gaps; three is mixed or provisional; two has material defects; one fails fundamentally. In intake/gated/spar turns or where no speech slot was supplied, non-assessable dimensions receive a provisional 3, not fabricated full-performance credit. Story/visuals in non-create modes judges the supported guidance or framing, not an unnecessary story.",
+    "Averages are the unweighted means of all five requested scores. Winners are holistic: false factual premises can outweigh a formatting advantage (case 9); a delivered inspectable artifact breaks equal averages (case 5). This is one paired sample per prompt, not a stable estimate of general skill performance.",
+    "Timing uses 130 wpm and a 90% planned ceiling, counting only selected spoken text, not headings, directions, alternate openings or placeholder instructions. Source-dependent replacements are counted at their stated budgets. Explicitly prescribed pauses are added; short pauses and audience response can only increase that lower-bound estimate.",
+    "Tool histories were not supplied and cannot be reconstructed from present-day tools. Case 5.1 grades whether availability is plainly declared; it does not endorse the declaration. The no-tool fallback branch is not demonstrated in either run, so it receives no speculative conditional pass.",
+    "Unsupported is not a claim that a statement is false in the world. Clearly labelled hypotheticals, proposals, placeholders and supplied/validly derived numbers are distinguished from asserted user/company facts. External public claims were not independently fact-checked."
+  ],
+  "evaluations": [
+    {
+      "id": 1,
+      "name": "Intake",
+      "scores": {
+        "A": [
+          4,
+          3,
+          4,
+          3,
+          3
+        ],
+        "B": [
+          3,
+          4,
+          2,
+          1,
+          2
+        ]
+      },
+      "winner": "A",
+      "why": "A withholds drafting and proposes useful defaults; B drafts immediately and adds unsupported product claims.",
+      "rows": [
+        {
+          "expectation": "Does not ask about the already-given length, audience type, or product.",
+          "A": {
+            "status": "FAIL",
+            "evidence": "R:12 asks \"Who's listening\" after the investor audience was supplied; the default reopens investor type as \"seed VCs and angels\"."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:66 asks \"Are they angels, a seed fund, or food-tech specialists?\" after investors were already specified."
+          }
+        },
+        {
+          "expectation": "Asks at most six questions in a single message.",
+          "A": {
+            "status": "FAIL",
+            "evidence": "R:10 calls them \"Six quick questions\", but R:12 alone asks about demo day versus fund meeting, listeners, decision-maker and Q&A; R:20 asks funding use/runway, savings and market size. Six numbered bundles exceed six independent requests."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:50-66 adds preparation questions (\"Why did 5 of the 14 not convert?\", \"How was the 31% measured?\") and five further multi-part intake items."
+          }
+        },
+        {
+          "expectation": "Every question has a suggested default.",
+          "A": {
+            "status": "FAIL",
+            "evidence": "R:18 asks \"why are you the team to solve this\"; R:19 defaults to solo delivery and cue cards, leaving that credibility question unanswered. Defaults exist per bundle, not per requested answer."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:62-66 lists information requests without suggested defaults; \"For example, are you a former chef\" supplies examples rather than an answer."
+          }
+        },
+        {
+          "expectation": "Does not produce a script or slides in this turn.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:25 promises approval \"before I write the script\"; the only output is intake."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:5 is \"Leftover: 3-minute investor pitch (draft 1)\" and R:9-39 is a full script."
+          }
+        }
+      ],
+      "sources": {
+        "A": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-1-intake-asks-only-missing\\with_skill\\run-1\\outputs\\response.md"
+        ],
+        "B": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-1-intake-asks-only-missing\\without_skill\\run-1\\outputs\\response.md"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Message gate",
+      "scores": {
+        "A": [
+          5,
+          3,
+          4,
+          3,
+          4
+        ],
+        "B": [
+          3,
+          3,
+          3,
+          1,
+          2
+        ]
+      },
+      "winner": "A",
+      "why": "A proposes an actionable goal, tested message choices and the key objection, then waits; B bypasses the gate and promises unconfirmed employment policies.",
+      "rows": [
+        {
+          "expectation": "States a goal as after this, who does what by when.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:18: \"After this talk, every employee backs the four-day week trial, and every team agrees by [date] how it will cover the day off.\""
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:5 gives a policy message (\"We're trying a four-day week on the same pay\"), not an explicit audience outcome with deadline; later team tasks do not supply the requested goal statement."
+          }
+        },
+        {
+          "expectation": "Offers two or three message candidates and shows all four test results.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:20 names retell/headline/banner/3 seconds; R:22-24 gives A/B/C verdicts, with C \"Weaker as a headline without context.\" Pay and Friday conditions are also stated."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:3-5 gives only \"The one thing they should leave with\"; there are no candidate alternatives or four-test results."
+          }
+        },
+        {
+          "expectation": "Names the elephant in the room.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:32: \"The elephant in the room: distrust, \"what's the catch?\"\" includes pay, longer days and cover."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:9: \"What's the catch? Is it a pay cut, layoffs coming, or more pressure?\""
+          }
+        },
+        {
+          "expectation": "Waits for confirmation instead of writing the full script.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:40: \"Send your answers (or \"ok\") and the message you want. Next I'll suggest 2–3 ways to structure the talk\"."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:1 announces \"a full draft\"; R:29-110 supplies the script."
+          }
+        }
+      ],
+      "sources": {
+        "A": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-2-message-gate-blocks-drafting\\with_skill\\run-1\\outputs\\response.md"
+        ],
+        "B": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-2-message-gate-blocks-drafting\\without_skill\\run-1\\outputs\\response.md"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name": "Just write it",
+      "scores": {
+        "A": [
+          4,
+          3,
+          4,
+          4,
+          1
+        ],
+        "B": [
+          3,
+          3,
+          4,
+          1,
+          1
+        ]
+      },
+      "winner": "A",
+      "why": "A labels assumptions and stays within the word budget, but both runs leave essential blanks and neither supplied dinner draft is ready to deliver.",
+      "rows": [
+        {
+          "expectation": "Produces a complete script without asking questions first.",
+          "A": {
+            "status": "FAIL",
+            "evidence": "S:20,23-25,34 leaves six essential fills, including \"[NEEDS SOURCE: win 2]\" and product name/benefit; R:25-29 confirms the unfinished material. No questions first, but not a complete ready-to-say script."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:9,11,19 requires \"[win #1]\", \"[win #2]\", \"[the hardest thing we dealt with this year]\", a specific memory and \"[product name]\". No questions first, but incomplete."
+          }
+        },
+        {
+          "expectation": "Lists assumptions.",
+          "A": {
+            "status": "PASS",
+            "evidence": "BR:6-31 \"Assumptions (check these first)\" lists speaker, setting, launch, holiday break and delivery."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:35-38 only gives \"Before you give it\" fill-in/delivery instructions; the prior dinner, late nights and February trouble are not listed as assumptions."
+          }
+        },
+        {
+          "expectation": "Marks both goal and message unconfirmed.",
+          "A": {
+            "status": "PASS",
+            "evidence": "BR:33 \"Goal (unconfirmed)\" and BR:38 \"Message (unconfirmed)\"."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:1-38 has no goal/message status; \"[product name]\" is a content blank, not an unconfirmed message label."
+          }
+        },
+        {
+          "expectation": "Script is roughly 230 words or fewer (234 at the exact formula).",
+          "A": {
+            "status": "PASS",
+            "evidence": "S:2: \"~145 words + ~45 in your fill-ins ≈ 190 words\"; recount confirms 145 fixed words and the 45-word replacement budget."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:37: \"It runs about 270 words\"; recount finds 233 fixed words before five required fills, so the complete version cannot meet 234 with realistic replacements."
+          }
+        },
+        {
+          "expectation": "Final words are not thank you.",
+          "A": {
+            "status": "PASS",
+            "evidence": "S:46 ends \"To this table, / and to March.\""
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:31 ends \"Cheers.\""
+          }
+        }
+      ],
+      "sources": {
+        "A": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-3-just-write-it-override\\with_skill\\run-1\\outputs\\response.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-3-just-write-it-override\\with_skill\\run-1\\outputs\\speeches\\end-of-year-dinner\\brief.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-3-just-write-it-override\\with_skill\\run-1\\outputs\\speeches\\end-of-year-dinner\\notes.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-3-just-write-it-override\\with_skill\\run-1\\outputs\\speeches\\end-of-year-dinner\\rehearsal.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-3-just-write-it-override\\with_skill\\run-1\\outputs\\speeches\\end-of-year-dinner\\script.md"
+        ],
+        "B": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-3-just-write-it-override\\without_skill\\run-1\\outputs\\response.md"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name": "Market accuracy",
+      "scores": {
+        "A": [
+          4,
+          4,
+          3,
+          3,
+          3
+        ],
+        "B": [
+          3,
+          2,
+          3,
+          2,
+          3
+        ]
+      },
+      "winner": "A",
+      "why": "A uses explicit source markers and a simpler one-slide calculation; B adds unsupported practice characteristics and omits the monthly-to-annual multiplier.",
+      "rows": [
+        {
+          "expectation": "No invented market-size, clinic-count or revenue numbers.",
+          "A": {
+            "status": "PASS",
+            "evidence": "S:12,16 uses \"[N] dental clinics\", \"€[P]\" and \"€[M] million\"; none is filled with a fabricated market amount."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:14 and R:34-40 leave market totals as \"[N]\", \"[X]\" or \"[PLN X]\". The unsupported \"one to three chairs\" is a different kind of number and is penalized under accuracy, exposing this expectation's narrow scope."
+          }
+        },
+        {
+          "expectation": "Uses [NEEDS SOURCE: ...] where a number is needed.",
+          "A": {
+            "status": "PASS",
+            "evidence": "S:12: \"[NEEDS SOURCE: number of dental clinics in Poland, with the year]\"; S:16 marks price and calculation."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:14 uses \"[N] practices × PLN [price]/mo\"; generic brackets and a source footer never use the requested NEEDS SOURCE marker."
+          }
+        },
+        {
+          "expectation": "Lists missing sources in the hand-over.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:23-29 \"Numbers I still need\" lists N/A/P/M, expansion and Q&A evidence."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:46-54 \"Numbers to fill in, and where to get them\" lists practice counts, size split, spending, no-shows, pricing and expansion sources."
+          }
+        }
+      ],
+      "sources": {
+        "A": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\response.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\speeches\\dental-pitch-market\\brief.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\speeches\\dental-pitch-market\\notes.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\speeches\\dental-pitch-market\\rehearsal.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\speeches\\dental-pitch-market\\script.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\speeches\\dental-pitch-market\\slides.md"
+        ],
+        "B": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-4-never-invents-facts\\without_skill\\run-1\\outputs\\response.md"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "Slide fallback",
+      "scores": {
+        "A": [
+          4,
+          3,
+          5,
+          2,
+          3
+        ],
+        "B": [
+          4,
+          4,
+          5,
+          2,
+          2
+        ]
+      },
+      "winner": "B",
+      "why": "B delivers an inspectable HTML deck and matching script; A stops at intake while neither run demonstrates the required Marp fallback.",
+      "rows": [
+        {
+          "expectation": "Plainly states whether a slide tool was found.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:3 says \"I found several slide tools here\". This passes the declaration criterion only; the claimed discovery is unverified, not accepted as proof of availability."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:3: \"I couldn't build a deck in a slide tool here, so the slides are a single HTML file.\""
+          }
+        },
+        {
+          "expectation": "If none is found, explains Marp plus render command or VS Code extension.",
+          "A": {
+            "status": "FAIL",
+            "evidence": "R:3 instead proposes \"Claude's Slides artifact\"; no Marp instructions or slides.marp.md exists. The intended no-tool branch cannot be verified as exercised."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:3 offers \"a single HTML file\" and browser/PDF instructions, not Marp, its extension or render command."
+          }
+        },
+        {
+          "expectation": "Mentions connecting a PowerPoint skill or Slides/Canva/Figma connector as an alternative.",
+          "A": {
+            "status": "FAIL",
+            "evidence": "R:3 asserts a PowerPoint skill/Figma/Google Slides already exist; it never offers connecting an integration as the alternative."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:3 says PowerPoint/Keynote/Google Slides text is \"short enough to retype\"; that is manual rebuilding, not connecting a skill or connector."
+          }
+        },
+        {
+          "expectation": "Does not block on the slide-tool answer.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:36 waits for message/default approval (\"reply \"ok\" to take message A\"), not a slide-tool decision; R:3 already suggests a default tool."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:5-8 delivers slides.html and script.md without waiting for tool selection."
+          }
+        }
+      ],
+      "sources": {
+        "A": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-5-no-slide-tool-fallback\\with_skill\\run-1\\outputs\\response.md"
+        ],
+        "B": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-5-no-slide-tool-fallback\\without_skill\\run-1\\outputs\\response.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-5-no-slide-tool-fallback\\without_skill\\run-1\\outputs\\script.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-5-no-slide-tool-fallback\\without_skill\\run-1\\outputs\\slides.html"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "Farewell",
+      "scores": {
+        "A": [
+          4,
+          4,
+          5,
+          4,
+          1
+        ],
+        "B": [
+          4,
+          4,
+          5,
+          1,
+          1
+        ]
+      },
+      "winner": "A",
+      "why": "A builds a shared toast from the supplied jar and names; B invents biographical anecdotes and substantially exceeds the word budget.",
+      "rows": [
+        {
+          "expectation": "No slides, or recommends skipping them.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:23: \"There are no slides, since it's a farewell\"; the output folder contains only brief/script/notes/rehearsal."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:1-29 contains only a speech and one timing note; no slide output exists."
+          }
+        },
+        {
+          "expectation": "Uses the sweets jar or regulars as a concrete image.",
+          "A": {
+            "status": "PASS",
+            "evidence": "S:25-27: \"And then, / the jar. / Always on the desk\" and \"a book, / a sweet\"."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:13: \"the jar of sweets on the desk\"."
+          }
+        },
+        {
+          "expectation": "Ends on a wish, toast or shared moment rather than thank you.",
+          "A": {
+            "status": "PASS",
+            "evidence": "S:48: \"Glasses up, / and say it with me: // To Rasa!\""
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:23-25: \"a wonderful new chapter ahead\" and \"To Rasa!\""
+          }
+        },
+        {
+          "expectation": "Does not invent other biographical facts about Rasa.",
+          "A": {
+            "status": "PASS",
+            "evidence": "BR:16-22 separates supplied facts from \"My pictures\"; the actual anecdote is \"[NEEDS SOURCE: one true moment]\" in S:32-35. The grey afternoon is a generic illustrative scene, not a claimed historical incident."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:9 invents knowing \"whose grandson had just started school\"; R:29 explicitly admits \"made-up details in the fourth paragraph\". R:5 and R:13 add more unsupported anecdotes."
+          }
+        }
+      ],
+      "sources": {
+        "A": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-6-occasion-no-slides-toast-ending\\with_skill\\run-1\\outputs\\response.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-6-occasion-no-slides-toast-ending\\with_skill\\run-1\\outputs\\speeches\\rasa-farewell\\brief.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-6-occasion-no-slides-toast-ending\\with_skill\\run-1\\outputs\\speeches\\rasa-farewell\\notes.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-6-occasion-no-slides-toast-ending\\with_skill\\run-1\\outputs\\speeches\\rasa-farewell\\rehearsal.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-6-occasion-no-slides-toast-ending\\with_skill\\run-1\\outputs\\speeches\\rasa-farewell\\script.md"
+        ],
+        "B": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-6-occasion-no-slides-toast-ending\\without_skill\\run-1\\outputs\\response.md"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "name": "Review",
+      "scores": {
+        "A": [
+          5,
+          3,
+          5,
+          4,
+          3
+        ],
+        "B": [
+          3,
+          3,
+          2,
+          2,
+          3
+        ]
+      },
+      "winner": "A",
+      "why": "A supplies the requested pass/fix audit and three goal-ranked fixes, while B gives six priorities and retains unsupported claims and a questions ending in its rewrite.",
+      "rows": [
+        {
+          "expectation": "Shows a pass/fix scorecard per section.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:19-28 labels sections \"Fix\", \"Pass\" and justified \"N/A\"."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:9-21 is a numeric \"Scorecard (1–5)\" without pass/fix judgments, so the requested checklist decisions are not supplied."
+          }
+        },
+        {
+          "expectation": "Flags goal/message, stock introduction, too many points, means posing as arguments and weak ending.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:5-9 diagnoses no goal/message; R:20-24 flags ten items, migration/activity, stock opening and \"thank you! Any questions?\"; R:40 explicitly relocates database detail."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:3,13-19,29,45,50 flags the absent message/ask, introduction, flat list, database benefits and ending."
+          }
+        },
+        {
+          "expectation": "Ranks the top three issues by impact on the goal.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:30-45 explicitly ranks \"It asks for nothing\", \"Ten facts, no message\", then unhandled risk, with cost and fix for each."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:25-32 lists six \"Top problems\" rather than a bounded top three, and the first three are headline/numbers/activities without ranking their cost against a proposed goal."
+          }
+        },
+        {
+          "expectation": "Rewrites opening and closing, before and after.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:61,64 gives opening before/after; R:91-94 gives closing before/after."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:38-50 \"Original | Problem | Try instead\" rewrites both the opening and ending, with an additional full template."
+          }
+        },
+        {
+          "expectation": "Asks what the audience should do afterwards or proposes a goal.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:12: \"what should the audience do afterwards?\" and R:13 proposes approval of the risk plan."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:80: \"What do you want them to do afterwards?\""
+          }
+        }
+      ],
+      "sources": {
+        "A": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-7-review-mode-scorecard\\with_skill\\run-1\\outputs\\response.md"
+        ],
+        "B": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-7-review-mode-scorecard\\without_skill\\run-1\\outputs\\response.md"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "name": "Transcript coaching",
+      "scores": {
+        "A": [
+          5,
+          3,
+          5,
+          3,
+          4
+        ],
+        "B": [
+          4,
+          3,
+          4,
+          2,
+          3
+        ]
+      },
+      "winner": "A",
+      "why": "A computes the observed pace and supplies the required coaching structure and observation limits; both miscount fillers and overstate the cause of the long delivery.",
+      "rows": [
+        {
+          "expectation": "Computes observed words per minute from transcript and duration.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:9: \"80 words in 2:10 = ~37 wpm. Comfortable is 120–140.\" Recount is 80 / (130/60) = 36.92 wpm."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:5 says 80 words normally take \"35 to 40 seconds\" but never calculates the observed roughly 37 wpm or compares it with 120–140."
+          }
+        },
+        {
+          "expectation": "Counts um, like, you know, basically and so correctly.",
+          "A": {
+            "status": "FAIL",
+            "evidence": "R:11 reports \"so ×3\" and 16 filler instances/19 words; there are four so tokens. With discourse-like ×2, not hedged \"would like\", the listed categories total 17 instances/20 words including kind of, actually and yeah."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:20 gives \"about 11 of 80 words\", omits a numerical so count and conflates multiword filler instances with words."
+          }
+        },
+        {
+          "expectation": "Flags maybe/perhaps/try to and it is believed.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:12,39 quotes \"we thought maybe we could try to perhaps\" and \"it is believed\"."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:12-14 quotes maybe/could try/perhaps; R:22 calls out \"It is believed\"."
+          }
+        },
+        {
+          "expectation": "Notes the buried 40-to-55 result and weak thank-you ending.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:14 says the result starts at word 53; R:45-51 replaces the thank-you ending with an ask."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:1,16 says the result is hidden; R:18 explicitly criticizes \"Thank you.\""
+          }
+        },
+        {
+          "expectation": "Gives three strengths, three fixes with rewrites, and one drill.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:21-25 lists three strengths; R:27-51 gives three before/after fixes; R:67-69 supplies the \"3-second pause\" drill."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:9-24 lists six problems, not three strengths and three fixes; R:50-56 gives a five-part practice plan rather than the requested one-drill hand-over."
+          }
+        },
+        {
+          "expectation": "Says a transcript cannot show eye contact or gestures.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:71: \"A transcript can't show eye contact, gestures or voice.\""
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:1-65 never states this observation limit; requesting a later recording at R:65 is not the same disclosure."
+          }
+        }
+      ],
+      "sources": {
+        "A": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-8-coach-mode-transcript\\with_skill\\run-1\\outputs\\response.md"
+        ],
+        "B": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-8-coach-mode-transcript\\without_skill\\run-1\\outputs\\response.md"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "name": "CFO sparring",
+      "scores": {
+        "A": [
+          3,
+          3,
+          3,
+          5,
+          3
+        ],
+        "B": [
+          4,
+          3,
+          3,
+          1,
+          3
+        ]
+      },
+      "winner": "A",
+      "why": "A's budget question is grounded in the brief; B's more economical interaction asserts a salary interpretation and recurring cost exceeding €100k without evidence.",
+      "rows": [
+        {
+          "expectation": "Asks exactly one question this turn.",
+          "A": {
+            "status": "FAIL",
+            "evidence": "R:16 asks the CFO question, then R:18 adds \"Your answer?\" after a long setup. The final prompt is an additional question even treating the CFO's linked subparts as one."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:9 has one focused request: \"tell me one decision ... and what that decision is worth in euros\". An imperative question counts as a question even without a question mark."
+          }
+        },
+        {
+          "expectation": "Stays in character as a skeptical CFO.",
+          "A": {
+            "status": "FAIL",
+            "evidence": "R:3-10 explains the process out of character (\"At the end I'll score you 1–5\"); it only starts acting at R:14 \"*In character.*\" A short setup is acceptable, but this dominates the turn."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "After a brief setup, R:5-9 stays in the CFO scene: \"[Looks up from the laptop but doesn't close it.]\" and the budget/decision challenge."
+          }
+        },
+        {
+          "expectation": "Does not answer for the user or give the full scorecard yet.",
+          "A": {
+            "status": "PASS",
+            "evidence": "R:7 promises future feedback (\"At the end I'll score you\") but provides no user answer or scored assessment."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:1-9 gives only setup and the opening challenge; no answer or scorecard is supplied."
+          }
+        }
+      ],
+      "sources": {
+        "A": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-9-spar-mode-one-question\\with_skill\\run-1\\outputs\\response.md"
+        ],
+        "B": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-9-spar-mode-one-question\\without_skill\\run-1\\outputs\\response.md"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "name": "Elevator adaptation",
+      "scores": {
+        "A": [
+          5,
+          4,
+          5,
+          3,
+          4
+        ],
+        "B": [
+          4,
+          3,
+          5,
+          2,
+          2
+        ]
+      },
+      "winner": "A",
+      "why": "A fits the word budget and preserves a direct dated ask; B is too long and explicitly keeps all three arguments, although A also retains them in renamed beats.",
+      "rows": [
+        {
+          "expectation": "Roughly 90 words or fewer (exact 90% budget 87.75).",
+          "A": {
+            "status": "PASS",
+            "evidence": "S:7-21 contains 80 spoken words, matching R:1."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:3-15 contains 94 spoken words, already above both 90 and 87.75; R:1 itself estimates \"about 95 words\"."
+          }
+        },
+        {
+          "expectation": "Keeps message and vote-yes CTA on 4 December.",
+          "A": {
+            "status": "PASS",
+            "evidence": "S:21: \"Give Market Street back to people on Saturdays\" and \"Vote yes on the pilot / on the fourth of December.\""
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:13 asks \"on the 4th of December, please vote yes on the pilot\"; R:15 repeats the message."
+          }
+        },
+        {
+          "expectation": "Uses one argument with proof, not all three.",
+          "A": {
+            "status": "FAIL",
+            "evidence": "S:10 gives children's safety, S:16 gives shops/survey and S:19 gives reversibility. R:12-14 renames them \"opening picture\" and \"safety net\" but preserves all three persuasive reasons."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:18 explicitly says \"Same goal, message, three arguments and call to action\"; R:7,9,11 contains shops, safety and the reversible test."
+          }
+        },
+        {
+          "expectation": "Uses the given 70% and invents no new numbers.",
+          "A": {
+            "status": "FAIL",
+            "evidence": "The script adds no new statistical figure, but R:28 and H:67 refer to \"the other 30%\" as against. H:69 says \"The ones against mostly worried about [concerns]\". 70% in favour does not establish that every remaining respondent opposed it. All output files count."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:7 uses \"Seventy percent\"; three months, 4 December and 45 seconds come from the prompt. No new empirical number is introduced; the unsupported \"Nothing lost\" is a nonnumeric accuracy problem."
+          }
+        }
+      ],
+      "sources": {
+        "A": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-10-adapt-to-elevator\\with_skill\\run-1\\outputs\\response.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-10-adapt-to-elevator\\with_skill\\run-1\\outputs\\speeches\\market-street-elevator\\brief.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-10-adapt-to-elevator\\with_skill\\run-1\\outputs\\speeches\\market-street-elevator\\notes.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-10-adapt-to-elevator\\with_skill\\run-1\\outputs\\speeches\\market-street-elevator\\rehearsal.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-10-adapt-to-elevator\\with_skill\\run-1\\outputs\\speeches\\market-street-elevator\\script.md"
+        ],
+        "B": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-10-adapt-to-elevator\\without_skill\\run-1\\outputs\\response.md"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "name": "Lithuanian speech",
+      "scores": {
+        "A": [
+          5,
+          4,
+          5,
+          4,
+          4
+        ],
+        "B": [
+          4,
+          4,
+          5,
+          1,
+          4
+        ]
+      },
+      "winner": "A",
+      "why": "A gives a concrete Lithuanian signup ask and labels missing logistics; B uses natural Lithuanian but invents volunteer commitments, teacher plans and event details.",
+      "rows": [
+        {
+          "expectation": "Script is in Lithuanian.",
+          "A": {
+            "status": "PASS",
+            "evidence": "S:10 begins \"Pakelkite ranką\"; S:60 ends \"Dabar paimkite jomis rašiklį.\" The whole chosen script is Lithuanian."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:3 begins \"Laba diena, mieli tėveliai\" and the speech remains Lithuanian throughout."
+          }
+        },
+        {
+          "expectation": "CTA says how and by when parents sign up.",
+          "A": {
+            "status": "PASS",
+            "evidence": "S:21 says \"šįvakar įsirašyti į savanorių lapą\"; S:52-54 specifies the sheet at the door, name/phone/task and a placeholder work-party date."
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:23: \"Dabar per suolus keliauja registracijos lapas. Pažymėkite, kaip norite prisidėti, ir palikite telefono numerį.\" This is a clear immediate signup instruction, although its logistics are assumed."
+          }
+        },
+        {
+          "expectation": "Does not end on ačiū or thank you.",
+          "A": {
+            "status": "PASS",
+            "evidence": "S:60 ends \"Dabar paimkite jomis rašiklį\"; the optional post-Q&A close ends \"Lapas prie durų.\""
+          },
+          "B": {
+            "status": "PASS",
+            "evidence": "R:29: \"Ačiū. Lapas jau pas jus.\" Its final words are the sheet cue, not ačiū; this is a literal pass with a weak rhetorical finish."
+          }
+        },
+        {
+          "expectation": "Lists assumptions because asked to just write.",
+          "A": {
+            "status": "PASS",
+            "evidence": "BR:7-23 \"Prielaidos\" lists speaker, audience, format, slides, commitment, delivery and missing facts; BR:3 marks goal/message unconfirmed."
+          },
+          "B": {
+            "status": "FAIL",
+            "evidence": "R:33-37 \"Prieš sakydami\" lists bracket replacements and delivery instructions, not assumptions; unbracketed commitments and teacher plans are presented as facts."
+          }
+        }
+      ],
+      "sources": {
+        "A": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-11-lithuanian-output\\with_skill\\run-1\\outputs\\response.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-11-lithuanian-output\\with_skill\\run-1\\outputs\\speeches\\mokyklos-sodas-savanoriai\\brief.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-11-lithuanian-output\\with_skill\\run-1\\outputs\\speeches\\mokyklos-sodas-savanoriai\\notes.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-11-lithuanian-output\\with_skill\\run-1\\outputs\\speeches\\mokyklos-sodas-savanoriai\\rehearsal.md",
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-11-lithuanian-output\\with_skill\\run-1\\outputs\\speeches\\mokyklos-sodas-savanoriai\\script.md"
+        ],
+        "B": [
+          "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-11-lithuanian-output\\without_skill\\run-1\\outputs\\response.md"
+        ]
+      }
+    }
+  ],
+  "nondiscriminating": [
+    [
+      "1.1, 1.2, 1.3",
+      "Both FAIL",
+      "Define already-known investor audience versus legitimately missing room/decision-maker details; count independent answer requests, not numbered bundles, and require a usable default for each."
+    ],
+    [
+      "2.3",
+      "Both PASS",
+      "Require the main objection to have an answer tied to confirmed pay/hours/coverage or an explicitly open fact; merely naming 'what is the catch?' is insufficient."
+    ],
+    [
+      "3.1",
+      "Both FAIL",
+      "Define complete as a primary script deliverable aloud without essential blanks; put optional personalization in an annex or provide a complete generic alternative."
+    ],
+    [
+      "3.5",
+      "Both PASS",
+      "Require the ending to create the intended shared action or launch commitment, rather than merely avoid the phrase thank you."
+    ],
+    [
+      "4.1",
+      "Both PASS",
+      "Cover all quantitative and qualitative claims, market boundaries, units and calculations; include a monthly-price annualization trap and unsupported practice-size claims."
+    ],
+    [
+      "4.3",
+      "Both PASS",
+      "Require source type, year, unit of analysis and which placeholder it resolves; naming GUS or a register alone is weak."
+    ],
+    [
+      "5.1",
+      "Both PASS",
+      "Provide a mocked tool registry and discovery trace; compare the declared state against it. A confident tool inventory must not earn operational credit."
+    ],
+    [
+      "5.2, 5.3",
+      "Both FAIL",
+      "Force no-slide-tools in the fixture; require the actual Marp file when drafting is authorized, a working render route, and an explicit connect-a-tool alternative."
+    ],
+    [
+      "5.4",
+      "Both PASS",
+      "Distinguish legitimate message approval from waiting on slide-tool choice; require the tool-independent next step to proceed with a stated default."
+    ],
+    [
+      "6.1",
+      "Both PASS",
+      "Keep as a regression guard and add an unnecessary-slides temptation; no need to delete a useful safeguard just because both passed once."
+    ],
+    [
+      "6.2",
+      "Both PASS",
+      "Require a sourced image to drive an emotional beat or the closing, not just mention a sweets jar."
+    ],
+    [
+      "6.3",
+      "Both PASS",
+      "Require a performable wish/toast with a shared action and suitable no-drinks alternative, not any occurrence of 'To Rasa'."
+    ],
+    [
+      "7.2",
+      "Both PASS",
+      "Require issue-to-impact-to-fix reasoning for every named flaw, especially the database migration's listener benefit; keyword spotting is insufficient."
+    ],
+    [
+      "7.4",
+      "Both PASS",
+      "Require the rewritten opening and closing to use only supplied facts, eliminate the criticized ending and make a dated ask."
+    ],
+    [
+      "7.5",
+      "Both PASS",
+      "Require a proposed goal with decision-maker, action and deadline, or exactly one targeted goal question rather than a general request for more context."
+    ],
+    [
+      "8.2",
+      "Both FAIL",
+      "Specify tokenization and contextual filler rules with a deterministic answer: um 4, discourse-like 2, you know 2, basically 2, so 4; 'would like' is a hedge."
+    ],
+    [
+      "8.3",
+      "Both PASS",
+      "Require calibrated rewrites that preserve uncertainty about causal evidence; replacing hedges with unjustified certainty should fail."
+    ],
+    [
+      "8.4",
+      "Both PASS",
+      "Require the rewritten first sentence to expose the result and the last sentence to request a dated decision; diagnosis alone is easy."
+    ],
+    [
+      "9.3",
+      "Both PASS",
+      "Also limit preamble and process explanations, and require the first turn to contain only one grounded in-character challenge."
+    ],
+    [
+      "10.2",
+      "Both PASS",
+      "Check the actual spoken text for the precise audience, decision and date, and require the actionable ask to survive cuts."
+    ],
+    [
+      "10.3",
+      "Both FAIL",
+      "Count independent reasons semantically across hook/problem/ask; safety imagery and a reversibility safety net still carry arguments. Require two reasons to disappear."
+    ],
+    [
+      "11.1",
+      "Both PASS",
+      "Add a native-language spoken-style check and audience paraphrase test, rather than detecting Lithuanian words."
+    ],
+    [
+      "11.2",
+      "Both PASS",
+      "Require signup route and deadline to be supplied, clearly proposed or placeholders; invented work-party logistics and commitment sizes must fail."
+    ],
+    [
+      "11.3",
+      "Both PASS",
+      "Evaluate the last rhetorical beat, including words immediately before it; appending a sheet cue after ačiū should not by itself demonstrate a strong close."
+    ]
+  ],
+  "weaknesses": [
+    {
+      "title": "Make timing and coaching arithmetic executable, including pauses.",
+      "change": "In references/script.md, rehearsal.md and checklist.md, require counted spoken text, bounded replacements, and an explicit pause/interaction budget before declaring a fit. Use spoken_words / 130 * 60 + explicitly timed pauses <= 0.9 * slot_seconds. Recompute after any cuts, alternative openings or optional personal ending. In modes.md require actual filler tallies rather than estimates.",
+      "evidence": "A3 has 145 fixed + 45 replacement words and 18 long pauses: at least 123.7 seconds before short pauses, against 108 planned seconds. A6 has 177 + 35 and 18 long pauses: at least 133.8 seconds; its header budgets about 8 seconds of pauses. A8 undercounts so by one."
+    },
+    {
+      "title": "Require evidence of slide capability and always implement the tested fallback.",
+      "change": "In intake.md, distinguish installed skills, account connectors and actually callable slide-building tools. Record the exact discovery result; if availability is unknown, say unknown and use the fallback. In slides.md require all three routes (Marp, connect a tool, manual rebuild), render instructions, and slides.marp.md once the message/structure gates permit drafting. Do not infer Google Slides editing from a generic Drive connection.",
+      "evidence": "A1/A2/A4/A5 assert several connected tools without supporting discovery evidence in the allowed files. In the designated fallback case A5 has only response.md, no Marp file or instructions; B instead builds an HTML deck."
+    },
+    {
+      "title": "Enforce mode-specific limits by substance, and keep the main script usable.",
+      "change": "In intake.md cap independent answer requests, each with a default. In qa.md start a fully specified spar session with one in-character question and no additional 'Your answer?'. In modes.md delete extra arguments from sub-minute adaptations instead of relocating them. In the just-write override, provide a complete main script from supplied facts; isolate optional source-dependent inserts and personalization. Check all companion files for unsupported deductions, including survey opposition.",
+      "evidence": "A1 hides many questions in six bundles; A9 spends most of the turn explaining the exercise and adds another question; A10 retains safety/shops/reversibility and calls the unreported remainder 30% against; A3 leaves six essential blanks."
+    }
+  ],
+  "facts": [
+    [
+      "A, 1/2/4/5",
+      "Unverified capability assertions",
+      "A1 R:8, A2 R:3, A4 R:31 and A5 R:3 claim connected Slides artifacts/PowerPoint/Google Slides/Figma tools. No allowed output proves discovery. These are unsupported availability claims, not established falsehoods; the historical tool registry was not supplied."
+    ],
+    [
+      "A, 5",
+      "Unprovided workshop duration",
+      "R:34: \"it's one evening\". The prompt supplies only a free workshop on 12 November; the opening requests the still-unknown length. This duration is neither confirmed nor marked as an assumption there."
+    ],
+    [
+      "A, 10",
+      "Unsupported opposition percentage",
+      "R:28 \"what the 30% against are worried about\" and H:67-70 \"the other 30%\" / \"The ones against mostly worried about [concerns]\". The complement may include neutral/no-opinion respondents; opposition was not supplied."
+    ],
+    [
+      "B, 1",
+      "Invented product behavior and customer story",
+      "R:22: \"There's no new hardware and no new process.\" R:26: \"When the pilot ended\" / \"Nobody had to stay\" / \"They stayed because the bin got emptier.\" Timing, obligations, causality and deployment requirements were not supplied. The every-morning-at-seven chef story is not labelled hypothetical."
+    ],
+    [
+      "B, 2",
+      "Unconfirmed employment and communication commitments",
+      "R:37: \"Same pay. Same benefits. Same goals.\" R:55 denies cost cutting and layoffs. R:64 promises no team worse off; R:81 \"I will too\"; R:92 and R:102 promise halfway results and an FAQ email today. Later cautions do not make the spoken assertions verified."
+    ],
+    [
+      "B, 3",
+      "Invented speaker memories and predicted crisis",
+      "R:7 says the speaker made a speech at last year's dinner; R:11 recalls late-night messages and never hearing \"that's not my job\"; R:19 says people built in spare gaps; R:21 predicts February trouble and a request to delay. These are unbracketed, unprovided personal/history claims."
+    ],
+    [
+      "B, 4",
+      "Unsupported clinic characteristics and erroneous units",
+      "R:34 says practices have \"one to three chairs\" and implies actual customer no-show losses; R:19 also supplies [1–3] as a numeric suggested size without evidence. R:14 equates clinics × monthly price with annual revenue without multiplying by 12. The latter is a calculation error, not an invented total-market number."
+    ],
+    [
+      "B, 5",
+      "Invented logistics and unsupported conversion claims",
+      "R:70 / S:75 promises real-code-comment exercises; R:75 / S:83 says the link is already on the meetup page and the speaker will be by the door. R:73 / S:79 says signup takes about 30 seconds; R:81 claims the ten-second wait brings more signups than anything else said. Some later setup cautions exist, but the spoken claims and comparative conversion assertion are unsupported."
+    ],
+    [
+      "B, 6",
+      "Invented Rasa biography and events",
+      "R:5 says she always found half-remembered books; R:9 adds detective readers, a grandson starting school, large-print needs and rainy-day visitors; R:13 invents children's manners and staff sweets habits. R:29 admits made-up details in the fourth paragraph, but other invented material remains unflagged."
+    ],
+    [
+      "B, 7",
+      "Invented performance outcome",
+      "R:58: \"made the business cheaper to run\". No cost outcome was given. \"Q3 was our strongest revenue quarter yet\" at R:27 is explicitly introduced as an example, so it is not classified as a verified historical claim or separately penalized as an invention."
+    ],
+    [
+      "B, 8",
+      "Changed baseline and invented test details",
+      "R:30 calls 40% the result \"Right now\" although the latest given result is 55%; R:32 asserts these were the three steps where most people dropped out; R:42 asserts the rollout is low-risk. R:48 offers a four-weeks-before/four-weeks-after sentence without knowing either interval. A/B design, retention and rollback examples inside clearly marked placeholders remain proposals, not established facts."
+    ],
+    [
+      "B, 9",
+      "Invented costs",
+      "R:7 converts the €80k request into salary and asserts \"more than a hundred grand a year, every year\" after adding a warehouse and BI licences; neither cost scope nor these purchases was supplied."
+    ],
+    [
+      "B, 10",
+      "Unjustified no-downside claim",
+      "R:11: \"Nothing lost.\" A cheap reversible pilot can still incur cost or harm. The 70% statistic is given, and the proposed pilot duration/date are given; no new empirical number appears."
+    ],
+    [
+      "B, 11",
+      "Invented project plans, commitments and event details",
+      "R:11 says teachers are already planning lessons and promises beds/berry bushes/herbs; R:15 commits parents to one or two hours per month; R:17 says one week per family suffices; R:19 allows children; R:21 promises about two hours and hot tea; R:25 claims the garden will be established by spring. Bracketed location/date/cake/target are labelled placeholders and are not classified as confirmed facts."
+    ]
+  ],
+  "timing": [
+    {
+      "case": 1,
+      "run": "A",
+      "words": "planned ~350",
+      "cap": "351 words / 162 s",
+      "finding": "Plausible planned word budget; no script yet, so provisional timing score."
+    },
+    {
+      "case": 1,
+      "run": "B",
+      "words": "317 fixed + 20 placeholder groups",
+      "cap": "351 words / 162 s",
+      "finding": "Claims ~400 words/under 3 minutes, gives no bounded replacement budget, and aims at the full slot rather than 90%."
+    },
+    {
+      "case": 2,
+      "run": "A",
+      "words": "planned ~1150",
+      "cap": "1170 words / 540 s",
+      "finding": "Fits planned word ceiling; no finished script."
+    },
+    {
+      "case": 2,
+      "run": "B",
+      "words": "729 fixed + 34 placeholder groups",
+      "cap": "1170 words / 540 s",
+      "finding": "Actual filled length unverifiable. Claimed ~1300 words and timing table use all 10 minutes, contradicting the planned ceiling."
+    },
+    {
+      "case": 3,
+      "run": "A",
+      "words": "145 fixed + 45 fills = 190",
+      "cap": "234 words / 108 s",
+      "finding": "18 long pauses at >=2 s: 190/130*60+36 = 123.7 s minimum before short pauses. Passes words; fails performance fit."
+    },
+    {
+      "case": 3,
+      "run": "B",
+      "words": "233 fixed + 5 essential fills; claims ~270",
+      "cap": "234 words / 108 s",
+      "finding": "Even one word per fill exceeds the exact ceiling; realistic fills and pauses exceed it substantially."
+    },
+    {
+      "case": 4,
+      "run": "A",
+      "words": "~91 fixed before numeric/name replacements",
+      "cap": "No user-supplied section slot",
+      "finding": "Assumes a one-minute section; ~45-second claim is not a fully verified pause-inclusive timing. Neutral/provisional timing score."
+    },
+    {
+      "case": 4,
+      "run": "B",
+      "words": "149 fixed before 15 placeholder groups",
+      "cap": "No user-supplied section slot",
+      "finding": "Calls it 60–75 seconds; already ~68.8 seconds before fills/pauses. Provisional timing score."
+    },
+    {
+      "case": 5,
+      "run": "A",
+      "words": "planned 585",
+      "cap": "585 words / 270 s",
+      "finding": "Correct ceiling formula but no script to time."
+    },
+    {
+      "case": 5,
+      "run": "B",
+      "words": "612 fixed + name/time/venue replacements (~615)",
+      "cap": "585 words / 270 s",
+      "finding": "615 words alone take 283.8 seconds; 3-second opening and 10-second signup wait bring this to ~296.8 s before other pauses."
+    },
+    {
+      "case": 6,
+      "run": "A",
+      "words": "177 fixed + 35-word story = 212",
+      "cap": "234 words / 108 s",
+      "finding": "18 long pauses at >=2 s: 212/130*60+36 = 133.8 s minimum; header only budgets ~8 s of pauses. Can skip optional story, but supplied default does not fit."
+    },
+    {
+      "case": 6,
+      "run": "B",
+      "words": "290",
+      "cap": "234 words / 108 s",
+      "finding": "133.8 seconds before pauses; over even the full 120-second slot."
+    },
+    {
+      "case": 7,
+      "run": "A/B",
+      "words": "Input transcript 62",
+      "cap": "No user-supplied slot",
+      "finding": "A's input count is correct; B's ~75 is not. Neither can establish a full-slot fit; provisional score 3 for both."
+    },
+    {
+      "case": 8,
+      "run": "A",
+      "words": "Input transcript 80; 130 elapsed seconds",
+      "cap": "234 words / 108 planned s",
+      "finding": "Observed pace 36.92 wpm; identifies overrun and 1:48 target. Filler so is 4, not 3."
+    },
+    {
+      "case": 8,
+      "run": "B",
+      "words": "Input transcript 80",
+      "cap": "234 words / 108 planned s",
+      "finding": "No observed wpm; shorter rehearsal target is reasonable but does not establish the cause of elapsed time."
+    },
+    {
+      "case": 9,
+      "run": "A/B",
+      "words": "Not a timed speech",
+      "cap": "None",
+      "finding": "Provisional timing score 3; process verbosity is graded in the mode expectations and clarity."
+    },
+    {
+      "case": 10,
+      "run": "A",
+      "words": "80",
+      "cap": "87.75 words / 40.5 s",
+      "finding": "36.92 s plus two 2-second pauses = 40.92 s. Within the 45-second slot and word budget, slightly over the 90% time ceiling."
+    },
+    {
+      "case": 10,
+      "run": "B",
+      "words": "94",
+      "cap": "87.75 words / 40.5 s",
+      "finding": "43.38 seconds before pauses; exceeds planned ceiling. Optional added follow-up makes it longer."
+    },
+    {
+      "case": 11,
+      "run": "A",
+      "words": "220 fixed + ~40 fills = 260",
+      "cap": "351 words / 162 s",
+      "finding": "14 long pauses at >=2 s gives 148 s before short pauses, plausibly within cap but less room than the hand-over suggests. Optional +15 s ending must be recalculated."
+    },
+    {
+      "case": 11,
+      "run": "B",
+      "words": "297 fixed + four short placeholder groups",
+      "cap": "351 words / 162 s",
+      "finding": "~137 s before fills and pauses; plausible fit with short replacements, but no bounded 90% rehearsal target."
+    }
+  ],
+  "summary": [
+    {
+      "eval": 1,
+      "name": "Intake",
+      "A_pass": 1,
+      "B_pass": 0,
+      "total": 4,
+      "A_avg": 3.4,
+      "B_avg": 2.4,
+      "winner": "A"
+    },
+    {
+      "eval": 2,
+      "name": "Message gate",
+      "A_pass": 4,
+      "B_pass": 1,
+      "total": 4,
+      "A_avg": 3.8,
+      "B_avg": 2.4,
+      "winner": "A"
+    },
+    {
+      "eval": 3,
+      "name": "Just write it",
+      "A_pass": 4,
+      "B_pass": 1,
+      "total": 5,
+      "A_avg": 3.2,
+      "B_avg": 2.4,
+      "winner": "A"
+    },
+    {
+      "eval": 4,
+      "name": "Market accuracy",
+      "A_pass": 3,
+      "B_pass": 2,
+      "total": 3,
+      "A_avg": 3.4,
+      "B_avg": 2.6,
+      "winner": "A"
+    },
+    {
+      "eval": 5,
+      "name": "Slide fallback",
+      "A_pass": 2,
+      "B_pass": 2,
+      "total": 4,
+      "A_avg": 3.4,
+      "B_avg": 3.4,
+      "winner": "B"
+    },
+    {
+      "eval": 6,
+      "name": "Farewell",
+      "A_pass": 4,
+      "B_pass": 3,
+      "total": 4,
+      "A_avg": 3.6,
+      "B_avg": 3,
+      "winner": "A"
+    },
+    {
+      "eval": 7,
+      "name": "Review",
+      "A_pass": 5,
+      "B_pass": 3,
+      "total": 5,
+      "A_avg": 4,
+      "B_avg": 2.6,
+      "winner": "A"
+    },
+    {
+      "eval": 8,
+      "name": "Transcript coaching",
+      "A_pass": 5,
+      "B_pass": 2,
+      "total": 6,
+      "A_avg": 4,
+      "B_avg": 3.2,
+      "winner": "A"
+    },
+    {
+      "eval": 9,
+      "name": "CFO sparring",
+      "A_pass": 1,
+      "B_pass": 3,
+      "total": 3,
+      "A_avg": 3.4,
+      "B_avg": 2.8,
+      "winner": "A"
+    },
+    {
+      "eval": 10,
+      "name": "Elevator adaptation",
+      "A_pass": 2,
+      "B_pass": 2,
+      "total": 4,
+      "A_avg": 4.2,
+      "B_avg": 3.2,
+      "winner": "A"
+    },
+    {
+      "eval": 11,
+      "name": "Lithuanian speech",
+      "A_pass": 4,
+      "B_pass": 3,
+      "total": 4,
+      "A_avg": 4.4,
+      "B_avg": 3.6,
+      "winner": "A"
+    }
+  ],
+  "totals": {
+    "A_pass": 35,
+    "B_pass": 22,
+    "expectations": 46,
+    "both_pass": 19,
+    "both_fail": 8
+  },
+  "source_manifest": [
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-1-intake-asks-only-missing\\with_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-1-intake-asks-only-missing\\with_skill\\run-1\\outputs\\response.md",
+      "bytes": 2772,
+      "sha256": "b107320b6bdf61cbe48d8618e71c0a5ad33589cd39c43c1668a304cbeba59d31"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-1-intake-asks-only-missing\\without_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-1-intake-asks-only-missing\\without_skill\\run-1\\outputs\\response.md",
+      "bytes": 4543,
+      "sha256": "07a4a053afefa90ccbba758ad6dcf05488a7ece570630b15f4153275a05a2605"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-2-message-gate-blocks-drafting\\with_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-2-message-gate-blocks-drafting\\with_skill\\run-1\\outputs\\response.md",
+      "bytes": 4820,
+      "sha256": "7063db05ad54541eb479b222681d2f77b6ff3d6fcf3e261fe6f1000cbdc512f2"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-2-message-gate-blocks-drafting\\without_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-2-message-gate-blocks-drafting\\without_skill\\run-1\\outputs\\response.md",
+      "bytes": 9329,
+      "sha256": "f1edbb6a5f0786d216daecdcad65bef302a2eb6885caf103107a20b42b7d645a"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-3-just-write-it-override\\with_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-3-just-write-it-override\\with_skill\\run-1\\outputs\\response.md",
+      "bytes": 2919,
+      "sha256": "683f826362a179d6d4aad53db7f8c6e490f264833c4064d23a8661dcd67cd2d6"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-3-just-write-it-override\\with_skill\\run-1\\outputs\\speeches\\end-of-year-dinner\\brief.md",
+      "relative": "eval-3-just-write-it-override\\with_skill\\run-1\\outputs\\speeches\\end-of-year-dinner\\brief.md",
+      "bytes": 4919,
+      "sha256": "e93e6ec5e6b524b5a55bd4eba876226d01b44c6175c0744329b31345731a99f1"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-3-just-write-it-override\\with_skill\\run-1\\outputs\\speeches\\end-of-year-dinner\\notes.md",
+      "relative": "eval-3-just-write-it-override\\with_skill\\run-1\\outputs\\speeches\\end-of-year-dinner\\notes.md",
+      "bytes": 1172,
+      "sha256": "1ae347fec37754d2a238f01000a67cbf303a31be1839e7c8b13f337a03f81c39"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-3-just-write-it-override\\with_skill\\run-1\\outputs\\speeches\\end-of-year-dinner\\rehearsal.md",
+      "relative": "eval-3-just-write-it-override\\with_skill\\run-1\\outputs\\speeches\\end-of-year-dinner\\rehearsal.md",
+      "bytes": 4520,
+      "sha256": "3050a08d6e6b2c88e0fd0018234a51abcc024dcc3b10a8cbd8c92a4f9cc1b3e6"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-3-just-write-it-override\\with_skill\\run-1\\outputs\\speeches\\end-of-year-dinner\\script.md",
+      "relative": "eval-3-just-write-it-override\\with_skill\\run-1\\outputs\\speeches\\end-of-year-dinner\\script.md",
+      "bytes": 3246,
+      "sha256": "4e29168a486a3dfcfc1601c92b008a4f0a6ecb29aeb54f127f4156af81caf75a"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-3-just-write-it-override\\without_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-3-just-write-it-override\\without_skill\\run-1\\outputs\\response.md",
+      "bytes": 1909,
+      "sha256": "366a028beb0b220ff8d7819cafb13368dbd88518b1fe7fa39256d4fceeb12c23"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\response.md",
+      "bytes": 3924,
+      "sha256": "1a04e371d40c797e49f09585512c0312110a4003482b3517973701f7e0987d63"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\speeches\\dental-pitch-market\\brief.md",
+      "relative": "eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\speeches\\dental-pitch-market\\brief.md",
+      "bytes": 4673,
+      "sha256": "1b301f9d4b0ddca75b8a6624213a03615819d5a4920ec19e94208d2aa52d578e"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\speeches\\dental-pitch-market\\notes.md",
+      "relative": "eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\speeches\\dental-pitch-market\\notes.md",
+      "bytes": 340,
+      "sha256": "eba244a304bb7d47f21fcc28c8c3bfbdde8128265331c2a299773dee14c7ebaf"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\speeches\\dental-pitch-market\\rehearsal.md",
+      "relative": "eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\speeches\\dental-pitch-market\\rehearsal.md",
+      "bytes": 2336,
+      "sha256": "207d139faed8c676e1db926e62d954c81aaffd76fe4ad4928a09bb141a6c5842"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\speeches\\dental-pitch-market\\script.md",
+      "relative": "eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\speeches\\dental-pitch-market\\script.md",
+      "bytes": 1714,
+      "sha256": "78057a2818892edcf57dedf0372d6d6fb7abe203ff624220d14246613e8413a7"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\speeches\\dental-pitch-market\\slides.md",
+      "relative": "eval-4-never-invents-facts\\with_skill\\run-1\\outputs\\speeches\\dental-pitch-market\\slides.md",
+      "bytes": 1042,
+      "sha256": "1217c1f80d2600714ff9c2f3d2c943221435fbbc425ed89921799060d0e53e15"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-4-never-invents-facts\\without_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-4-never-invents-facts\\without_skill\\run-1\\outputs\\response.md",
+      "bytes": 4210,
+      "sha256": "cfc92bb32ac1318eeada820d8409826eded58bccef2ad407f143ae81b209c52c"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-5-no-slide-tool-fallback\\with_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-5-no-slide-tool-fallback\\with_skill\\run-1\\outputs\\response.md",
+      "bytes": 4388,
+      "sha256": "f6752172a93e3831f5fe173023b36a24760b2ba72086c0ed69a8d77ed6b28c46"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-5-no-slide-tool-fallback\\without_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-5-no-slide-tool-fallback\\without_skill\\run-1\\outputs\\response.md",
+      "bytes": 7385,
+      "sha256": "28328a03979cebd5431009ecf6f9725ccbff73b5cf32b9c595bc1f6862790144"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-5-no-slide-tool-fallback\\without_skill\\run-1\\outputs\\script.md",
+      "relative": "eval-5-no-slide-tool-fallback\\without_skill\\run-1\\outputs\\script.md",
+      "bytes": 5334,
+      "sha256": "757f7cfe489774df546b0269049ed3ccadc00f39c40c69509436c86fbe6090f1"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-5-no-slide-tool-fallback\\without_skill\\run-1\\outputs\\slides.html",
+      "relative": "eval-5-no-slide-tool-fallback\\without_skill\\run-1\\outputs\\slides.html",
+      "bytes": 21233,
+      "sha256": "bc04bb6d51c035b28e66a13307838b1744d5b5dea53fb051b121e2a375b7aa21"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-6-occasion-no-slides-toast-ending\\with_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-6-occasion-no-slides-toast-ending\\with_skill\\run-1\\outputs\\response.md",
+      "bytes": 2414,
+      "sha256": "b7efb3f2cfc9169bad4e8081c48ab686e344466d14624fe3bcd858491b0b747b"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-6-occasion-no-slides-toast-ending\\with_skill\\run-1\\outputs\\speeches\\rasa-farewell\\brief.md",
+      "relative": "eval-6-occasion-no-slides-toast-ending\\with_skill\\run-1\\outputs\\speeches\\rasa-farewell\\brief.md",
+      "bytes": 5133,
+      "sha256": "4b07430fb84e59114508a8cabd0f72931af633a1f66b333d2c2a51aa00bee10f"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-6-occasion-no-slides-toast-ending\\with_skill\\run-1\\outputs\\speeches\\rasa-farewell\\notes.md",
+      "relative": "eval-6-occasion-no-slides-toast-ending\\with_skill\\run-1\\outputs\\speeches\\rasa-farewell\\notes.md",
+      "bytes": 1428,
+      "sha256": "d0307a295fcd22679a2917ee977cf1b866418776b3cc3c9fb7bc045df6385078"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-6-occasion-no-slides-toast-ending\\with_skill\\run-1\\outputs\\speeches\\rasa-farewell\\rehearsal.md",
+      "relative": "eval-6-occasion-no-slides-toast-ending\\with_skill\\run-1\\outputs\\speeches\\rasa-farewell\\rehearsal.md",
+      "bytes": 4089,
+      "sha256": "29facbbcf9211de5725e975cd5ff36dec0694c229a07a8962f02aa10194ed3b2"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-6-occasion-no-slides-toast-ending\\with_skill\\run-1\\outputs\\speeches\\rasa-farewell\\script.md",
+      "relative": "eval-6-occasion-no-slides-toast-ending\\with_skill\\run-1\\outputs\\speeches\\rasa-farewell\\script.md",
+      "bytes": 2982,
+      "sha256": "7db6242d488acb3de614378a514a0b8c19da6c9c684d63b6c6a948e9f5ab1a7b"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-6-occasion-no-slides-toast-ending\\without_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-6-occasion-no-slides-toast-ending\\without_skill\\run-1\\outputs\\response.md",
+      "bytes": 1814,
+      "sha256": "eb4ba09c33ea4514292577173ba417f41c692fa47fb752271440fb4a927d1ce5"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-7-review-mode-scorecard\\with_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-7-review-mode-scorecard\\with_skill\\run-1\\outputs\\response.md",
+      "bytes": 8610,
+      "sha256": "08a3badee4aaf1ea44b8ecd75fccddc93457e2674e3cca5ecfdd0ed628d4b685"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-7-review-mode-scorecard\\without_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-7-review-mode-scorecard\\without_skill\\run-1\\outputs\\response.md",
+      "bytes": 7321,
+      "sha256": "c3e7117f7bd1811cb7df8cc54bd3cdbec9aaee1e365c5f22c4438e44d1e740c1"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-8-coach-mode-transcript\\with_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-8-coach-mode-transcript\\with_skill\\run-1\\outputs\\response.md",
+      "bytes": 5529,
+      "sha256": "9021bfc91103a789f0f9f4eccc9bd4bb96f0808b1d3eb2cdde4a69aaba4484f6"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-8-coach-mode-transcript\\without_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-8-coach-mode-transcript\\without_skill\\run-1\\outputs\\response.md",
+      "bytes": 5088,
+      "sha256": "4d94deae8e5a99c6c142f4ec10f99d9f986ffc2c0efeae1ceed96aa70c784291"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-9-spar-mode-one-question\\with_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-9-spar-mode-one-question\\with_skill\\run-1\\outputs\\response.md",
+      "bytes": 1337,
+      "sha256": "9bbcc9e2070ab005c317df60fe10c4ceb8668f55d9614d7353fdf21949fd2c42"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-9-spar-mode-one-question\\without_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-9-spar-mode-one-question\\without_skill\\run-1\\outputs\\response.md",
+      "bytes": 710,
+      "sha256": "de534fcf84fded5f04dbfe9067669c8ccac7d488e2496a107b3d26df096d92bc"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-10-adapt-to-elevator\\with_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-10-adapt-to-elevator\\with_skill\\run-1\\outputs\\response.md",
+      "bytes": 2694,
+      "sha256": "a751c68c0676d654dfb554317032c835d708630dbbeb528399abae643eb45717"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-10-adapt-to-elevator\\with_skill\\run-1\\outputs\\speeches\\market-street-elevator\\brief.md",
+      "relative": "eval-10-adapt-to-elevator\\with_skill\\run-1\\outputs\\speeches\\market-street-elevator\\brief.md",
+      "bytes": 4312,
+      "sha256": "37640044988858a50426e2d1088f668bd57ca2f2ed72e8f17f594878432e845a"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-10-adapt-to-elevator\\with_skill\\run-1\\outputs\\speeches\\market-street-elevator\\notes.md",
+      "relative": "eval-10-adapt-to-elevator\\with_skill\\run-1\\outputs\\speeches\\market-street-elevator\\notes.md",
+      "bytes": 1162,
+      "sha256": "e96ae8a4a88830a30d7d657c30734e2b7b8c14a8efc760d19bfc08b95534a5e2"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-10-adapt-to-elevator\\with_skill\\run-1\\outputs\\speeches\\market-street-elevator\\rehearsal.md",
+      "relative": "eval-10-adapt-to-elevator\\with_skill\\run-1\\outputs\\speeches\\market-street-elevator\\rehearsal.md",
+      "bytes": 5852,
+      "sha256": "103d2544c911990757e1422d4d17fcee60b88265bdfb5a462c1fa7264b98f725"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-10-adapt-to-elevator\\with_skill\\run-1\\outputs\\speeches\\market-street-elevator\\script.md",
+      "relative": "eval-10-adapt-to-elevator\\with_skill\\run-1\\outputs\\speeches\\market-street-elevator\\script.md",
+      "bytes": 2771,
+      "sha256": "110379e3e85a612215871a1a5a7ec35c524f80c12967e7e091e1311085d982bd"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-10-adapt-to-elevator\\without_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-10-adapt-to-elevator\\without_skill\\run-1\\outputs\\response.md",
+      "bytes": 2007,
+      "sha256": "f09c0e763d4f3b4a7cf3a62fbe00ff6062d34aa67444ff94e74f888b8d851759"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-11-lithuanian-output\\with_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-11-lithuanian-output\\with_skill\\run-1\\outputs\\response.md",
+      "bytes": 3359,
+      "sha256": "05c9635f151d64ba9797c886da117b32e484e3687c9937f8147ca78e16aebbdc"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-11-lithuanian-output\\with_skill\\run-1\\outputs\\speeches\\mokyklos-sodas-savanoriai\\brief.md",
+      "relative": "eval-11-lithuanian-output\\with_skill\\run-1\\outputs\\speeches\\mokyklos-sodas-savanoriai\\brief.md",
+      "bytes": 5562,
+      "sha256": "d4ace5859126b617330b019621b8ec14daedcd7cd6cfa3b6384c1d8b11ebd47f"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-11-lithuanian-output\\with_skill\\run-1\\outputs\\speeches\\mokyklos-sodas-savanoriai\\notes.md",
+      "relative": "eval-11-lithuanian-output\\with_skill\\run-1\\outputs\\speeches\\mokyklos-sodas-savanoriai\\notes.md",
+      "bytes": 2132,
+      "sha256": "55b68d3575b35e12f2f664ceb46ee289eb84db60a5e032337b468c5173a518da"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-11-lithuanian-output\\with_skill\\run-1\\outputs\\speeches\\mokyklos-sodas-savanoriai\\rehearsal.md",
+      "relative": "eval-11-lithuanian-output\\with_skill\\run-1\\outputs\\speeches\\mokyklos-sodas-savanoriai\\rehearsal.md",
+      "bytes": 6466,
+      "sha256": "bba246a2f292915ab37b98b013ba7ac3d49155ac83428b5634f17457b06a7b8f"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-11-lithuanian-output\\with_skill\\run-1\\outputs\\speeches\\mokyklos-sodas-savanoriai\\script.md",
+      "relative": "eval-11-lithuanian-output\\with_skill\\run-1\\outputs\\speeches\\mokyklos-sodas-savanoriai\\script.md",
+      "bytes": 5048,
+      "sha256": "666b8352a45b7392b264790e3e484398c52b0156cde326e0bb725b031827dca2"
+    },
+    {
+      "path": "C:\\Users\\Janiz\\AppData\\Local\\Temp\\claude\\c--Users-Janiz-Documents-GitHub-Pitching-and-Public-Speaking\\6a92f5fa-9b34-4663-bf94-ae53693f2e1f\\scratchpad\\podium-workspace\\iteration-1\\eval-11-lithuanian-output\\without_skill\\run-1\\outputs\\response.md",
+      "relative": "eval-11-lithuanian-output\\without_skill\\run-1\\outputs\\response.md",
+      "bytes": 2933,
+      "sha256": "f674fa537fec0e484e94518eb0b655ee64d2ba7aa239783c1ded53ad91955c21"
+    }
+  ],
+  "test_cases_sha256": "5ffa6fcccf53d101b50798ab0f17d7b0ad96c6b3f700e023d051ce1aba1afefb"
+}
