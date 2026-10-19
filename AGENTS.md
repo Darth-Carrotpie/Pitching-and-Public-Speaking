@@ -38,7 +38,8 @@ its `references/` instead; this file is the compact version.
   "thank you". Protect the closing's time. Add a final close for after Q&A.
 - Clarity filters: talk to one non-expert neighbour; active verbs; simple
   words; cut it in half, then in half again.
-- Timing: 130 words per minute; plan for at most 90% of the slot.
+- Timing: words ÷ 130 × 60 + 2.5 s per long pause + timed moments ≤ 90% of the
+  slot in seconds. Count only the spoken text; show the sum.
 
 ## Slides
 
@@ -59,7 +60,12 @@ a day-of checklist.
 
 ## Hard rules
 
-- Never invent facts, numbers, quotes or names. Write `[NEEDS SOURCE: …]` and list them.
+- Never invent facts, numbers, quotes or names, and never deduce them ("70% in
+  favour" ≠ "30% against"). Write `[NEEDS SOURCE: …]` and list them.
+- Count substance, not labels: at most 6 questions by what they ask; in an
+  elevator version, other arguments are deleted, not recast.
+- Slide tools: name only what you can see and actually call. Otherwise write
+  `slides.marp.md` and give the three routes (render it, connect a tool, rebuild by hand).
 - Message before structure, structure before prose. At most 3 arguments.
 - Sell the island (what the listener gets), not the plane (how you work).
 - Write in the user's language, in the speaker's own voice.

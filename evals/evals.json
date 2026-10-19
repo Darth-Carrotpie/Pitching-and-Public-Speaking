@@ -8,10 +8,11 @@
       "expected_output": "One batch of at most 6 intake questions about what is still missing (goal shape, speaker, slides or Q&A), each with a suggested default. No script yet.",
       "files": [],
       "expectations": [
-        "Does not ask about the length, the audience type or the product, which were already given",
-        "Asks at most 6 questions in a single message",
-        "Every question has a suggested default",
-        "Does not produce a script or slides in this turn"
+        "Does not re-ask anything already given (length, investor audience, product, pilot numbers, raise); asking about missing room details such as who decides or whether there is Q&A is fine",
+        "Makes at most 6 independent answer requests in total, counting each separate question inside a bundled item",
+        "Every answer request has a usable suggested default",
+        "Produces no script, outline or slides in this turn",
+        "Names a slide tool as available only if it says how it checked; otherwise says availability is unknown"
       ]
     },
     {
@@ -21,10 +22,11 @@
       "expected_output": "A goal written as a verb, 2-3 candidate one-line messages each run through the four tests, at most 3 arguments, the elephant in the room, and a request to confirm before structuring.",
       "files": [],
       "expectations": [
-        "States the goal in the form 'after this, who will do what by when'",
-        "Offers 2-3 candidate messages and shows the retell/headline/banner/3-second results",
-        "Names an elephant in the room (e.g. fear about workload or pay)",
-        "Waits for confirmation instead of writing the full script"
+        "States the goal as 'after this, who will do what by when'",
+        "Offers 2-3 candidate messages and shows the retell/headline/banner/3-second result for each",
+        "Names the main objection (e.g. 'what's the catch?') and ties the answer to a confirmed fact or marks the deciding facts (pay, hours, coverage) as open",
+        "Waits for confirmation instead of writing the full script",
+        "Promises no employment terms (pay, benefits, no layoffs) as fact"
       ]
     },
     {
@@ -34,11 +36,12 @@
       "expected_output": "A complete short script, with the assumptions listed and the message marked unconfirmed in the brief.",
       "files": [],
       "expectations": [
-        "Produces a complete script without asking questions first",
+        "The main script can be delivered aloud as is, built from the given facts: no essential blanks, personal details only as separate optional inserts",
         "Lists its assumptions",
         "Marks the goal and message as unconfirmed",
-        "The script is roughly 230 words or fewer (2 min × 130 wpm × 0.9)",
-        "The final words are not 'thank you'"
+        "Counted spoken text plus marked pauses (words / 130 * 60 + 2.5 s per long pause) is at most 108 seconds",
+        "Ends on a shared action that builds excitement for the March launch (e.g. a toast), not on 'thank you'",
+        "Invents no speaker memories, team events or wins"
       ]
     },
     {
@@ -48,9 +51,10 @@
       "expected_output": "A slide spec and script section where the market numbers are [NEEDS SOURCE: ...] placeholders, not invented figures.",
       "files": [],
       "expectations": [
-        "Contains no invented numbers for market size, clinic count or revenue",
-        "Uses [NEEDS SOURCE: ...] where a number is needed",
-        "Lists the missing sources in the hand-over"
+        "Makes no invented quantitative or qualitative claims about Polish dental clinics (count, size, chairs, no-show losses, software use)",
+        "Uses [NEEDS SOURCE: ...] for every number the slide needs",
+        "Any market calculation uses consistent units (a monthly price is multiplied by 12 for an annual figure)",
+        "For each missing number, names the source type, the year and unit needed, and which placeholder it fills"
       ]
     },
     {
@@ -60,11 +64,13 @@
       "expected_output": "Early on, a short note that no slide tool is connected, with the three options (Marp fallback, connect a tool, build it yourself), then the work continues without waiting. If it gets that far, the hand-over includes slides.marp.md.",
       "files": [],
       "expectations": [
-        "Says plainly whether a slide tool was found",
-        "If none was found, explains the Marp fallback with the render command or the VS Code extension",
-        "Mentions connecting a PowerPoint skill or a Slides/Canva/Figma connector as an alternative",
-        "Does not block on the slide-tool answer"
-      ]
+        "States plainly that no callable slide tool was found, and how it checked",
+        "Gives three routes: the Marp fallback with a render command or the VS Code extension, connecting a slide tool, or rebuilding by hand from the spec",
+        "Does not wait on the slide-tool question: moves on to the next tool-independent step (intake or message gate) with defaults",
+        "Writes slides.marp.md if it drafts in this turn; otherwise says it will be written once drafting starts",
+        "Invents no workshop details (length, format, exercises, how long sign-up takes)"
+      ],
+      "setup": "Run with no slide-building tools, skills or connectors available to the agent."
     },
     {
       "id": 6,
@@ -73,10 +79,11 @@
       "expected_output": "A short story-based speech, no slides, using an image, an emotion and a rhythm device, and ending on a wish or a toast, not on 'thank you'.",
       "files": [],
       "expectations": [
-        "Does not produce slides, or recommends skipping them",
-        "Uses the sweets jar or the regulars as a concrete image",
-        "Ends on a wish, a toast or the shared moment, not on 'thank you'",
-        "Does not invent other biographical facts about Rasa"
+        "Produces no slides, or recommends skipping them",
+        "The sweets jar or the regulars' names drive an emotional beat or the closing, not just a mention",
+        "Ends on a performable wish or toast with a shared action, with an alternative if there are no drinks",
+        "Invents no biographical facts or events about Rasa or the regulars; any added imagery is flagged as such",
+        "Counted spoken text plus marked pauses is at most 108 seconds"
       ]
     },
     {
@@ -87,10 +94,10 @@
       "files": [],
       "expectations": [
         "Shows a scorecard (pass/fix per section)",
-        "Flags the missing goal and message, the 'hello, my name is' opening, too many points, means posing as arguments (database migration), and the 'thank you, any questions' ending",
+        "Each named flaw (no goal, the 'my name is' opening, too many points, the database migration as a means, the 'thank you, any questions' ending) comes with its impact on the goal and a fix",
         "Ranks the top 3 issues by impact on the goal",
-        "Rewrites the opening and the closing, before and after",
-        "Asks what the audience should do afterwards, or proposes a goal"
+        "The rewritten opening and closing use only facts from the original, drop the 'thank you, any questions' ending, and end on a concrete ask",
+        "Proposes a goal with decision-maker, action and deadline, or asks exactly one targeted goal question"
       ]
     },
     {
@@ -100,12 +107,13 @@
       "expected_output": "Pace in wpm against the 120-140 range and the slot, filler counts, hedges and passive voice, the structure check, 3 strengths, 3 fixes with rewritten lines, and one drill.",
       "files": [],
       "expectations": [
-        "Computes words per minute from the transcript and the duration",
-        "Counts the filler words (um, like, you know, basically, so)",
-        "Flags hedges ('maybe', 'perhaps', 'try to') and the passive 'it is believed'",
-        "Notes that the strongest fact (40% to 55%) is buried, and the weak 'thank you' ending",
+        "Computes the pace from the transcript and the duration (about 37 wpm)",
+        "Filler counts are exact: um 4, like 2, you know 2, basically 2, so 4",
+        "Flags the hedges and the passive 'it is believed'; the rewrite removes hedges without claiming more certainty than the evidence supports",
+        "The rewritten first sentence states the 40% to 55% result, and the last sentence asks for a dated decision",
         "Gives 3 strengths, 3 fixes with rewritten lines, and one drill",
-        "Says a transcript can't show eye contact or gestures"
+        "Says a transcript can't show eye contact or gestures",
+        "Does not state the cause of the overrun as fact (a missing part of the transcript vs long pauses)"
       ]
     },
     {
@@ -115,9 +123,10 @@
       "expected_output": "In character, a single tough opening question. No list of questions.",
       "files": [],
       "expectations": [
-        "Asks exactly one question in this turn",
-        "Stays in character as a skeptical CFO",
-        "Does not answer for the user or give the full scorecard yet"
+        "The turn contains exactly one in-character question and no other questions (no 'Your answer?')",
+        "Any set-up or explanation is at most two lines",
+        "The question is grounded in the brief and adds no invented costs or facts",
+        "Does not answer for the user or give the scorecard yet"
       ]
     },
     {
@@ -127,10 +136,10 @@
       "expected_output": "About 85 words or fewer: hook, problem, solution, one proof, ask. It keeps the message and the CTA.",
       "files": [],
       "expectations": [
-        "Is roughly 90 words or fewer (45 s × 130 wpm × 0.9 ≈ 88)",
-        "Keeps the message and the CTA (vote yes on 4 December)",
-        "Uses one argument with its proof, not all three",
-        "Uses only the given 70% figure and invents no new numbers"
+        "The spoken text is at most 88 words and at most 40.5 seconds including marked pauses",
+        "The spoken text keeps the message and the dated ask (vote yes on 4 December)",
+        "Only one argument remains: safety and reversibility are removed entirely, not recast as an image or a safety net",
+        "Uses only the given 70% figure; no derived figures such as '30% against'"
       ]
     },
     {
@@ -140,10 +149,11 @@
       "expected_output": "The speech is written in Lithuanian, with a concrete CTA (sign up, by when) and spoken-language sentences.",
       "files": [],
       "expectations": [
-        "The script is in Lithuanian",
-        "The CTA is concrete: how and by when parents sign up (a placeholder date is fine)",
-        "Doesn't end on 'ačiū' or 'thank you'",
-        "Lists its assumptions, since it was told to just write"
+        "The script is natural spoken Lithuanian (short sentences, no translated-sounding phrases)",
+        "The CTA's sign-up route and deadline are given, clearly proposed, or placeholders",
+        "The last beat is the CTA or the message; no 'ačiū' in the final lines",
+        "Lists its assumptions, since it was told to just write",
+        "Invents no project facts (teachers' plans, plants, time commitments, event details) presented as fact"
       ]
     }
   ]

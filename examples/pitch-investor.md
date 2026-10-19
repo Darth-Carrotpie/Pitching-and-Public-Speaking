@@ -62,7 +62,7 @@ User picked 1.
 
 ~~~markdown
 # Leftover: script
-~290 words · ~2:15 at 130 wpm · slot: 3 min + 5 min Q&A
+289 words = 133 s · 11 long pauses = 28 s · total 161 s · limit 162 s (90% of 3 min) · then 5 min Q&A
 
 ## Opening (0:00–0:22) [SLIDE 1]
 [MEMORIZE] For nine years I ran a kitchen with 120 seats. / Every night I closed it the same way. //
@@ -191,7 +191,7 @@ Because I guessed wrong that morning."
 ## Hand-over
 
 > **Message:** Restaurants bin their profit every night. Leftover stops it.
-> **Structure:** Monroe, about 2:15 of a 3:00 slot, leaving room for pauses. Deck: 6 slides plus a leave-behind; built with the
+> **Structure:** Monroe, about 2:40 with pauses, within the 2:42 limit for a 3:00 slot. Deck: 6 slides plus a leave-behind; built with the
 > connected PowerPoint skill.
 > **Needs you (5):** prep-waste share of food cost, how waste was measured, monthly saving per
 > restaurant, retention after month 3, market size. Each one is marked `[NEEDS SOURCE]` in the

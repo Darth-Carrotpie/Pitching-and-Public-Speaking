@@ -9,8 +9,11 @@ Never ask about something the user already told you.
 
 ## 2. Must-knows
 
-Ask only the missing ones, in one message, at most 6 questions. Give each a
-suggested default the user can accept with "ok".
+Ask only the missing ones, in one message: at most 6 answer requests in total.
+Count what you actually ask, not the numbering: an item that asks three things
+counts as three. Give each request a suggested default the user can accept with "ok".
+Things the user already gave (length, audience type, product, numbers) are not
+missing; details they didn't give (who decides, whether there's Q&A) can be.
 
 | # | Must-know | Ask like |
 |---|---|---|
@@ -42,19 +45,25 @@ assumptions at the top of `brief.md`, and continue.
 
 ## Slide tools
 
-Check before the first draft, if the speech will have slides. Look through the
-tools and skills you have for a slide builder:
+Check before the first draft, if the speech will have slides. Only count what you
+can see in your own tool and skill list, and sort it into three levels:
 
-- a PowerPoint / .pptx skill or tool
-- a Google Slides or Google Drive connector
-- a Figma Slides, Canva or Gamma connector
-- a slide-deck artifact type or another presentation integration
+| Level | Means | Example |
+|---|---|---|
+| **Callable** | a tool or skill that creates or edits slides, which you can invoke now | a .pptx skill, a slides-editing action, a deck artifact type |
+| **Connector only** | access to a service, but no action that builds slides | a Google Drive connection with file tools only |
+| **Unknown** | you can't inspect your tools | most chat-only hosts |
 
-**Found one:** say in one line which tool you'll use at hand-over.
-**Found several:** name them and suggest one.
-**Found none:** tell the user, briefly, and carry on without waiting:
+Report it in one line, with the level and how you know: "Found: pptx skill
+(callable, in my skill list). Google Drive (files only; I can't confirm Slides
+editing)." Never name a tool you didn't actually see. Treat "connector only"
+and "unknown" as no tool.
 
-> No slide tool is connected here. I'll still write the full slide spec. Then you can:
+**At least one callable:** name it and suggest it for the hand-over.
+**None callable, or unknown:** tell the user, briefly, and carry on without waiting.
+Write `slides.marp.md` as soon as drafting starts (`slides.md`, "Hand-off"):
+
+> I can't build slides directly here. I'll still write the full slide spec. Then you can:
 > 1. **Use the fallback.** I'll also write `slides.marp.md`. It opens as a deck in
 >    VS Code with the Marp extension, or `npx @marp-team/marp-cli@latest slides.marp.md --pptx`
 >    turns it into a PowerPoint file.

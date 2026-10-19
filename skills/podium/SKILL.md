@@ -39,8 +39,8 @@ Reference files live in `references/`. Read each one only when you reach its ste
 ## Create workflow
 
 1. **Set up.** Check silently: can you write files here, and which slide tool
-   is available? If the speech will have slides and there is no slide tool,
-   tell the user now (`intake.md`, "Slide tools"), then carry on.
+   can you actually call (`intake.md`, "Slide tools")? If the speech will have
+   slides, tell the user what you found and how you checked, then carry on.
 2. **Intake** (`intake.md`). Use everything the user already told you. Ask only
    the missing must-knows, in one batch, each with a suggested default.
 3. **Message gate** (`message.md`). Agree the goal, a one-line message, at most
@@ -75,6 +75,10 @@ Write the speech in the language the user writes in, unless they ask otherwise.
 
 - **Never invent** facts, numbers, quotes, names, customers or results. Where a
   claim needs proof the user hasn't given, write `[NEEDS SOURCE: what is needed]`.
+- **Never deduce** them either: "70% in favour" doesn't mean "30% against", and "a
+  free workshop" doesn't mean "one evening". This applies to every file, not just the script.
+- **Count substance, not labels.** A numbered question that asks three things is
+  three questions. An argument recast as an image is still an argument.
 - **Message before structure, structure before prose.**
 - **Three arguments at most.** Cut, don't cram.
 - **Sell the island, not the plane.** Every argument says what the listener gets,
@@ -82,5 +86,6 @@ Write the speech in the language the user writes in, unless they ask otherwise.
 - **Write for the ear**, in the speaker's own voice. Use humour only if it comes
   naturally to them.
 - **End on the call to action**, never on "thank you" or "any questions?".
-- **Fit the time.** 130 words per minute; plan for at most 90% of the slot.
+- **Fit the time, pauses included.** Spoken words ÷ 130 × 60 + timed pauses must
+  stay within 90% of the slot, in seconds (`script.md`, "Timing").
 - **Ask little, propose much.** Every question comes with a suggested answer.

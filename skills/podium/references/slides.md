@@ -68,7 +68,10 @@ decks). The same story and slide order, at reading density:
 speaker line into the presenter notes, and to build the leave-behind as a
 separate file if one was requested.
 
-**Without one, use the Marp fallback:** write `slides.marp.md` next to `slides.md`.
+**Without a callable tool, or if you're not sure, use the Marp fallback.** Actually
+write `slides.marp.md` next to `slides.md`; don't just mention it. Then give the
+user all three routes: render the Marp file, connect a slide tool and ask again,
+or rebuild it by hand from the spec.
 
 ~~~markdown
 ---

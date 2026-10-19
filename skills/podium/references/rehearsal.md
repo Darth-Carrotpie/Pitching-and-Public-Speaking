@@ -5,10 +5,11 @@ table, a practice plan, the top 3 techniques, Q&A prep and a day-of checklist.
 
 ## Timing table
 
-| Section | Starts | Lasts | Words | Skip if late? |
-|---|---|---|---|---|
+| Section | Starts | Lasts | Words | Pauses | Skip if late? |
+|---|---|---|---|---|---|
 
-The total must fit 90% of the slot.
+Lasts = words ÷ 130 × 60 + pauses (`script.md`, "Timing"). The total must fit
+90% of the slot.
 
 ## Practice plan
 

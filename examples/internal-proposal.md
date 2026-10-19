@@ -49,7 +49,7 @@ User picked 1.
 
 ~~~markdown
 # Async updates pilot: script
-~185 words · ~1:25 at 130 wpm · slot: 3 min
+183 words = 84 s · 5 long pauses = 13 s · total 97 s · limit 162 s (90% of 3 min)
 
 ## Answer (0:00–0:12) [SLIDE 1]
 [MEMORIZE] I'm asking for one decision today: /
@@ -111,6 +111,6 @@ Presented · 3 slides · style: company template
 ## Hand-over
 
 > **Message:** Same visibility, 18 hours a week back. Let's test it for 6 weeks.
-> **Structure:** Answer first, about 1:25 of a 3:00 slot, leaving time for questions. 3 slides.
+> **Structure:** Answer first, about 1:40 with pauses, leaving time for questions in the 3:00 slot. 3 slides.
 > **Needs you (0):** no sources missing. The only number is 12 × 90 minutes.
 > **Rehearse first:** the elephant section. Say it calmly, not defensively.

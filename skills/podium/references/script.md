@@ -6,7 +6,7 @@ The script is the full spoken text. Write it to be heard, not read.
 
 ~~~markdown
 # <Title>: script
-~N words · ~M min at 130 wpm · slot: X min
+N words = A s · P long pauses = B s · total T s · limit L s (90% of X min)
 
 ## Opening (0:00–0:30) [SLIDE 1]
 [MEMORIZE] First sentence. / Second sentence. // ...
@@ -17,7 +17,15 @@ The script is the full spoken text. Write it to be heard, not read.
 
 Cues: `/` short pause · `//` long pause (2–3 s) · **bold** = stress ·
 `[SLIDE n]` = advance · `[MEMORIZE]` = learn word for word · `[NEEDS SOURCE: …]`.
-Give every section a timestamp and put the word count at the top.
+Give every section a timestamp and put the timing sum at the top (see "Timing").
+
+## When the user said "just write it"
+
+The main script must work aloud as it is, built only from the facts given: no
+essential blanks. Where a personal detail would make it better, write a complete
+line that needs no invented facts, and offer the personal version separately as
+`Optional insert: …`. Use a placeholder only for a fact the speech can't work
+without (a date, a sign-up link), and keep those few.
 
 ## Opening (about 15%)
 
@@ -100,6 +108,17 @@ from the user, or `[NEEDS SOURCE]`.
 
 ## Timing
 
-130 words per minute (120–140 is the comfortable range). Plan for at most 90% of
-the slot so pauses and laughter fit; shorter is fine if the goal is met. Count
-the words before handing over and adjust.
+Count, don't estimate:
+
+1. **Words**: only the spoken text of the main version. Skip headings, cues, stage
+   directions, alternative openings and placeholder instructions. Count each
+   placeholder at its stated budget (`[story, 30–40 words]` = 40).
+2. **Seconds** = words ÷ 130 × 60 **+ 2.5 s per `//`** + every timed moment
+   (a show of hands, raising glasses, applause, a demo).
+3. **Limit** = 0.9 × slot in seconds. Seconds must be ≤ the limit.
+
+Show the sum in the header, e.g. `190 words = 88 s · 8 long pauses = 20 s · total
+108 s · limit 108 s`. Recompute after every cut, optional part or swapped opening.
+In short speeches, long pauses are expensive: keep only the ones that matter.
+Shorter than the limit is fine if the goal is met. (130 wpm is a default; if
+the language or speaker is slower, say so and adjust.)

@@ -19,7 +19,8 @@ fix or what needs the user (a missing source, a choice only they can make).
 ## Structure and time
 - [ ] Follows the agreed structure
 - [ ] Opening about 15%, closing 10–15%
-- [ ] Word count ≤ 130 × minutes × 0.9
+- [ ] Words ÷ 130 × 60 + timed pauses ≤ 0.9 × slot in seconds, with the sum shown in the script header
+- [ ] "Just write it": the main script works aloud as is; personal details are optional inserts
 - [ ] Skippable body beats are marked
 
 ## Opening
@@ -46,6 +47,9 @@ fix or what needs the user (a missing source, a choice only they can make).
 
 ## Accuracy
 - [ ] No invented facts, numbers, quotes, names or results
+- [ ] No deduced facts: complements ("30% against"), durations, causes or logistics the user didn't give
+- [ ] The brief, cue cards, rehearsal kit and Q&A prep checked too, not just the script
+- [ ] Questions to the user: at most 6, counted by what they ask, not by numbering
 - [ ] Every number has a source from the user, or `[NEEDS SOURCE]`
 - [ ] Numbers are rounded and made concrete
 
@@ -54,7 +58,7 @@ fix or what needs the user (a missing source, a choice only they can make).
 - [ ] About 6 words at most besides the headline; no script on the slides
 - [ ] Every slide maps to a script line and a `[SLIDE n]` cue
 - [ ] Leave-behind lines are there, if a leave-behind was requested
-- [ ] A slide tool is chosen, or the fallback has been explained
+- [ ] Slide tools reported with their level and how you checked; with no callable tool, `slides.marp.md` is written
 
 ## Rehearsal kit
 - [ ] The timing table fits the slot

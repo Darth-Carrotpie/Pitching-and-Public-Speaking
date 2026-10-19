@@ -37,10 +37,15 @@ Play the audience so the user can practise.
 
 1. **Set up.** Take the persona from the brief, or ask: a skeptical investor, a
    CFO guarding the budget, a board member, a hostile journalist, a tired
-   all-hands crowd. Ask for the speech or brief if you don't have it.
-   Defaults: tough but fair, 5 questions.
+   all-hands crowd. Defaults: tough but fair, 5 questions. If the persona and
+   topic are given, don't explain the exercise: one line at most ("Skeptical CFO,
+   5 questions, feedback after each answer."), then the first question. Ask for a
+   brief only if the topic is missing.
 2. **One question at a time**, in character. Start moderate and escalate.
    Include the elephant, a numbers challenge, and one hostile or off-topic question.
+   End the turn on the question itself: no "Your answer?", no second question.
+   Ground every question in what the user said. Don't invent costs or facts to
+   challenge them with.
 3. **After each answer**, step out of character for two lines: what worked, and
    one thing to improve (too long? repeated the question? bridged back to the
    message? defensive?). Then ask the next question.

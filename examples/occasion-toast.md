@@ -45,7 +45,7 @@ hours to bring him the passport he forgot."
 
 ~~~markdown
 # Toast for Tomas and Ieva: script
-~205 words · ~1:35 at 130 wpm · slot: 3 min
+206 words = 95 s · 10 long pauses = 25 s · total 120 s · limit 162 s (90% of 3 min)
 
 ## Connect and story (0:00–0:34)
 [MEMORIZE] I met Tomas when we were nine. / On the first day of summer camp, / he pushed me into the lake. //
@@ -106,6 +106,6 @@ To Ieva and Tomas: / **never late for each other.**
 ## Hand-over
 
 > **Message:** Tomas was late for everything, but never for the people he loves.
-> **Structure:** Toast, about 1:35 (short beats long at a wedding). No slides.
+> **Structure:** Toast, about 2:00 with pauses (short beats long at a wedding). No slides.
 > **Needs you (0):** every detail comes from you.
 > **Rehearse first:** the lake story, slowly. Let the "second splash" land.
